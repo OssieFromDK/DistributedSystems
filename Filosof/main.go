@@ -1,82 +1,90 @@
 package main
 
 import (
-    "fmt"
-    "time"
+	"fmt"
+	"time"
 )
 
-type SpisepindChV2 struct {
-    id      int
-    request chan chan bool
+type ChopstickChV2 struct {
+	id int
+	request chan chan bool
+	put chan bool
 }
 
-func SpisepindV2(id int) SpisepindChV2 {
-    return SpisepindChV2{
-        id:      id,
-        request: make(chan chan bool),
-    }
+func ChopstickV2(id int) ChopstickChV2 {
+	return ChopstickChV2{
+		id: id,
+		request: make(chan chan bool),
+		put: make(chan bool),
+	}
 }
 
-func RunSpisepind(pind SpisepindChV2) {
-    for {
-        replyChan := <-pind.request
-        replyChan <- true
-    }
+func RunChopstick(stick ChopstickChV2) {
+	for {
+		replyChan := <-stick.request
+		replyChan <- true
+		<-stick.put
+	}
 }
 
-func FilosofV2(navn string, venstreID, højreID int, venstrePind, højrePind SpisepindChV2) {
-    for i := 0; i < 3; i++ {
-        fmt.Println("Philosopher", navn, "tænker")
-        time.Sleep(300 * time.Millisecond)
+func PhilosopherV2(name string, leftID, rightID int, leftStick, rightStick ChopstickChV2) {
+	for i := 0; i < 3; i++ {
+		fmt.Println("Philosopher", name, "is thinking")
+		time.Sleep(300 * time.Millisecond)
 
-        if venstreID < højreID {
-            tagPind(venstrePind)
-            fmt.Println("Philosopher", navn, "tog venstre spisepind", venstreID)
+		if leftID < rightID {
+			takeStick(leftStick)
+			fmt.Println("Philosopher", name, "took left chopstick", leftID)
 
-            tagPind(højrePind)
-            fmt.Println("Philosopher", navn, "tog højre spisepind", højreID)
-        } else {
-            tagPind(højrePind)
-            fmt.Println("Philosopher", navn, "tog højre spisepind", højreID)
+			takeStick(rightStick)
+			fmt.Println("Philosopher", name, "took right chopstick", rightID)
+		} else {
+			takeStick(rightStick)
+			fmt.Println("Philosopher", name, "took right chopstick", rightID)
 
-            tagPind(venstrePind)
-            fmt.Println("Philosopher", navn, "tog venstre spisepind", venstreID)
-        }
+			takeStick(leftStick)
+			fmt.Println("Philosopher", name, "took left chopstick", leftID)
+		}
 
-        fmt.Println("Philosopher", navn, "spiser (", i+1, "/3 )")
-        time.Sleep(300 * time.Millisecond)
+		fmt.Println("Philosopher", name, "is eating (", i+1, "/3 )")
+		time.Sleep(300 * time.Millisecond)
 
-        fmt.Println("Philosopher", navn, "lagde begge pinde tilbage")
-    }
+		putStick(leftStick)
+		putStick(rightStick)
+		fmt.Println("Philosopher", name, "put both chopsticks back")
+	}
 
-    fmt.Println("Philosopher", navn, "er færdig med at spise")
+	fmt.Println("Philosopher", name, "is done eating")
 }
 
-func tagPind(pind SpisepindChV2) {
-    reply := make(chan bool)
-    pind.request <- reply
-    <-reply
+func takeStick(stick ChopstickChV2) {
+	reply := make(chan bool)
+	stick.request <- reply
+	<-reply
+}
+
+func putStick(stick ChopstickChV2) {
+	stick.put <- true
 }
 
 func main() {
+	stick1 := ChopstickV2(0)
+	stick2 := ChopstickV2(1)
+	stick3 := ChopstickV2(2)
+	stick4 := ChopstickV2(3)
+	stick5 := ChopstickV2(4)
 
-    pind1 := SpisepindV2(0)
-    pind2 := SpisepindV2(1)
-    pind3 := SpisepindV2(2)
-    pind4 := SpisepindV2(3)
-    pind5 := SpisepindV2(4)
+	go RunChopstick(stick1)
+	go RunChopstick(stick2)
+	go RunChopstick(stick3)
+	go RunChopstick(stick4)
+	go RunChopstick(stick5)
 
-    go RunSpisepind(pind1)
-    go RunSpisepind(pind2)
-    go RunSpisepind(pind3)
-    go RunSpisepind(pind4)
-    go RunSpisepind(pind5)
+	go PhilosopherV2("F1", 0, 1, stick1, stick2)
+	go PhilosopherV2("F2", 1, 2, stick2, stick3)
+	go PhilosopherV2("F3", 2, 3, stick3, stick4)
+	go PhilosopherV2("F4", 3, 4, stick4, stick5)
+	go PhilosopherV2("F5", 4, 0, stick5, stick1)
 
-    go FilosofV2("F1", 0, 1, pind1, pind2)
-    go FilosofV2("F2", 1, 2, pind2, pind3)
-    go FilosofV2("F3", 2, 3, pind3, pind4)
-    go FilosofV2("F4", 3, 4, pind4, pind5)
-    go FilosofV2("F5", 4, 0, pind5, pind1)
-
-    time.Sleep(9 * time.Second)
+	time.Sleep(9 * time.Second)
 }
