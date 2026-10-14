@@ -7,8 +7,9 @@ import (
 )
 
 type Packet2 struct {
-    Type   string
-    Number uint32
+    Type string
+    Seq  uint32
+    Ack  uint32
 }
 
 func client3(clientToServer, serverToClient chan Packet2, id int) {
@@ -18,18 +19,18 @@ func client3(clientToServer, serverToClient chan Packet2, id int) {
     isn := rand.Uint32()
 
     for attempt := 1; attempt <= maxRetries; attempt++ {
-        fmt.Printf("Client %d: Sending SYN %d (attempt %d)\n", id, isn, attempt)
-        clientToServer <- Packet2{Type: "SYN", Number: isn}
+        fmt.Printf("Client %d: Sending SYN seq=%d (attempt %d)\n", id, isn, attempt)
+        clientToServer <- Packet2{Type: "SYN", Seq: isn, Ack: 0}
 
         select {
         case response := <-serverToClient:
-            if response.Type == "SYN-ACK" && response.Number == isn+1 {
-                fmt.Printf("Client %d: Received SYN-ACK %d\n", id, response.Number)
-                clientToServer <- Packet2{Type: "ACK", Number: isn + 1}
+            if response.Type == "SYN-ACK" && response.Ack == isn+1 {
+                fmt.Printf("Client %d: Received SYN-ACK seq=%d ack=%d\n", id, response.Seq, response.Ack)
+                clientToServer <- Packet2{Type: "ACK", Seq: isn + 1, Ack: response.Seq + 1}
                 return
             }
         case <-time.After(timeout):
-            fmt.Printf("Client %d: Timeout on SYN %d, retrying\n", id, isn)
+            fmt.Printf("Client %d: Timeout on SYN seq=%d, retrying\n", id, isn)
         }
     }
     fmt.Printf("Client %d: Gave up (ISN %d)\n", id, isn)
@@ -41,22 +42,26 @@ func server3(clientToServer, serverToClient chan Packet2) {
 
     packet := <-clientToServer
     if packet.Type != "SYN" { return }
-    fmt.Printf("Server: Received SYN %d\n", packet.Number)
-    expected := packet.Number + 1
+    fmt.Printf("Server: Received SYN seq=%d\n", packet.Seq)
+
+    isn := rand.Uint32()
+    clientSeq := packet.Seq
+    expectedAck := isn + 1
 
     for attempt := 1; attempt <= maxRetries; attempt++ {
-        serverToClient <- Packet2{Type: "SYN-ACK", Number: expected}
+        fmt.Printf("Server: Sending SYN-ACK seq=%d ack=%d (attempt %d)\n", isn, clientSeq+1, attempt)
+        serverToClient <- Packet2{Type: "SYN-ACK", Seq: isn, Ack: clientSeq + 1}
         select {
-        case ack := <-clientToServer:
-            if ack.Type == "SYN" && ack.Number == packet.Number {
+        case reply := <-clientToServer:
+            if reply.Type == "SYN" && reply.Seq == clientSeq {
                 continue
             }
-            if ack.Type == "ACK" && ack.Number == expected {
-                fmt.Printf("Connection %d Established\n", ack.Number)
+            if reply.Type == "ACK" && reply.Ack == expectedAck {
+                fmt.Printf("Connection Established (server seq=%d, client seq=%d)\n", isn, reply.Seq)
                 return
             }
         case <-time.After(timeout):
-            fmt.Printf("Server: Timeout on SYN-ACK %d, resending\n", expected)
+            fmt.Printf("Server: Timeout on SYN-ACK seq=%d, resending\n", isn)
         }
     }
 }
@@ -66,22 +71,22 @@ func forwarder(clientIncoming chan Packet2, serverIncoming chan Packet2, serverO
         select {
         case packet := <-clientIncoming:
             if rand.Intn(100) < 20 {
-                fmt.Printf("Forwarder (Client -> Server): LOST %s %d\n", packet.Type, packet.Number)
+                fmt.Printf("Forwarder (Client -> Server): LOST %s seq=%d ack=%d\n", packet.Type, packet.Seq, packet.Ack)
                 continue
             }
             delay := time.Duration(rand.Intn(1000))
             time.Sleep(delay * time.Millisecond)
-            fmt.Printf("Forwarder (Client -> Server): Forwarded %s %d after %v\n", packet.Type, packet.Number, delay*time.Millisecond)
+            fmt.Printf("Forwarder (Client -> Server): Forwarded %s seq=%d ack=%d after %v\n", packet.Type, packet.Seq, packet.Ack, delay*time.Millisecond)
             serverOutgoing <- packet
 
         case packet := <-serverIncoming:
             if rand.Intn(100) < 20 {
-                fmt.Printf("Forwarder (Server -> Client): LOST %s %d\n", packet.Type, packet.Number)
+                fmt.Printf("Forwarder (Server -> Client): LOST %s seq=%d ack=%d\n", packet.Type, packet.Seq, packet.Ack)
                 continue
             }
             delay := time.Duration(rand.Intn(1000))
             time.Sleep(delay * time.Millisecond)
-            fmt.Printf("Forwarder (Server -> Client): Forwarded %s %d after %v\n", packet.Type, packet.Number, delay*time.Millisecond)
+            fmt.Printf("Forwarder (Server -> Client): Forwarded %s seq=%d ack=%d after %v\n", packet.Type, packet.Seq, packet.Ack, delay*time.Millisecond)
             clientOutgoing <- packet
         }
     }
