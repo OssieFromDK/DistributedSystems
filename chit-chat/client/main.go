@@ -3,146 +3,72 @@ package main
 import (
 	"bufio"
 	"context"
+	"fmt"
 	"log"
 	"os"
+	"unicode/utf8"
+
+	proto "chitchat/grpc"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
-
-	pb "chitchat/grpc"
 )
 
 func main() {
-	var clientID string
-	clientID = "Client1"
-
-	if len(os.Args) > 1 {
-		clientID = os.Args[1]
-	}
-
-	var connection *grpc.ClientConn
-	var err error
-
-	connection, err = grpc.NewClient(
-		"localhost:50051",
-		grpc.WithTransportCredentials(insecure.NewCredentials()),
-	)
+	name := os.Args[1]
+	conn, err := grpc.NewClient("localhost:5050", grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
-		log.Fatal("Could not connect to server: ", err)
+		log.Fatal(err)
 	}
-	defer connection.Close()
+	client := proto.NewChitChatClient(conn)
 
-	log.Println("Connected to chat server")
+	lamport := make(chan int64, 1)
+	lamport <- 0
+	tick := func(t int64) int64 {
+		next := max(<-lamport, t) + 1
+		lamport <- next
+		return next
+	}
 
-	var client pb.ChatServiceClient
-	client = pb.NewChatServiceClient(connection)
-
-	var stream pb.ChatService_ConnectClient
-	stream, err = client.Connect(context.Background())
+	stream, err := client.Join(context.Background(), &proto.Message{Sender: name, Lamport: tick(0)})
 	if err != nil {
-		log.Fatal("Could not open chat stream: ", err)
+		log.Fatal(err)
 	}
 
-	log.Println("Chat stream opened")
-
-	var joinRequest *pb.ClientRequest
-	joinRequest = &pb.ClientRequest{
-		ClientId: clientID,
-		Action:   pb.Action_JOIN,
-		Content:  "",
-	}
-
-	err = stream.Send(joinRequest)
+	os.MkdirAll("logs", 0755)
+	file, err := os.Create("logs/" + name + ".log")
 	if err != nil {
-		log.Fatal("Could not send join request: ", err)
+		log.Fatal(err)
 	}
-
-	log.Println("Joined chat as:", clientID)
+	log.SetOutput(file)
+	log.SetPrefix("[Client] ")
+	log.Printf("event=CONNECT client=%s", name)
 
 	go func() {
 		for {
-			var response *pb.ServerMessage
-			var receiveErr error
-
-			response, receiveErr = stream.Recv()
-			if receiveErr != nil {
-				log.Println("Connection to server closed:", receiveErr)
+			msg, err := stream.Recv()
+			if err != nil {
 				return
 			}
-
-			log.Printf(
-				"[%d] %s",
-				response.GetLogicalTime(),
-				response.GetContent(),
-			)
+			local := tick(msg.Lamport)
+			fmt.Printf("[%d] %s: %s\n", msg.Lamport, msg.Sender, msg.Text)
+			log.Printf("event=RECEIVE client=%s sender=%s lamport=%d local=%d text=%q", name, msg.Sender, msg.Lamport, local, msg.Text)
 		}
 	}()
 
-	log.Println("Type a message and press Enter. Type /quit to leave.")
-
-	var scanner *bufio.Scanner
-	scanner = bufio.NewScanner(os.Stdin)
-
-	for scanner.Scan() {
-		var content string
-		content = scanner.Text()
-
-		if content == "/quit" {
-			var leaveRequest *pb.ClientRequest
-			leaveRequest = &pb.ClientRequest{
-				ClientId: clientID,
-				Action:   pb.Action_LEAVE,
-				Content:  "",
-			}
-
-			err = stream.Send(leaveRequest)
-			if err != nil {
-				log.Println("Could not send leave request:", err)
-			}
-
-			var closeErr error
-			closeErr = stream.CloseSend()
-			if closeErr != nil {
-				log.Println("Could not close chat stream:", closeErr)
-			}
-
-			log.Println("Leaving chat")
-			return
+	scanner := bufio.NewScanner(os.Stdin)
+	for scanner.Scan() && scanner.Text() != "/quit" {
+		if utf8.RuneCountInString(scanner.Text()) > 128 {
+			fmt.Println("message is longer than 128 characters")
+			continue
 		}
 
-		var messageRequest *pb.ClientRequest
-		messageRequest = &pb.ClientRequest{
-			ClientId: clientID,
-			Action:   pb.Action_PUBLISH,
-			Content:  content,
-		}
-
-		err = stream.Send(messageRequest)
-		if err != nil {
-			log.Println("Could not send message:", err)
-			return
-		}
+		t := tick(0)
+		log.Printf("event=PUBLISH client=%s lamport=%d text=%q", name, t, scanner.Text())
+		client.Publish(context.Background(), &proto.Message{Sender: name, Text: scanner.Text(), Lamport: t})
 	}
 
-	if scanner.Err() != nil {
-		log.Println("Error reading input:", scanner.Err())
-	}
-
-	var leaveRequest *pb.ClientRequest
-	leaveRequest = &pb.ClientRequest{
-		ClientId: clientID,
-		Action:   pb.Action_LEAVE,
-		Content:  "",
-	}
-
-	err = stream.Send(leaveRequest)
-	if err != nil {
-		log.Println("Could not send leave request:", err)
-	}
-
-	var closeErr error
-	closeErr = stream.CloseSend()
-	if closeErr != nil {
-		log.Println("Could not close chat stream:", closeErr)
-	}
+	log.Printf("event=DISCONNECT client=%s", name)
+	client.Leave(context.Background(), &proto.Message{Sender: name, Lamport: tick(0)})
+	conn.Close()
 }

@@ -1,11 +1,20 @@
 # Chit Chat
 
-This is our chat program made in Go with grpc.
+## How to run
 
-To run it, you first have to start the server with `go run ./server`. Then open more terminals and run the clients with `go run ./client navn`, `go run ./client navn1` etc.
+Run every command from the project root. Start the server first:
 
-You can send messages and they get sent to the other clients too. You can use `/quit` to leave the chat.
+```
+go run ./server
+```
 
-We use gRPC and protobuf for communication between the server and clients. The server also uses logical timestamps for the messages.
+Then start each client in its own terminal with a unique name:
 
-Remember to start the server before starting the clients.
+```
+go run ./client alice
+go run ./client bob
+go run ./client charlie
+```
+
+Type a message and press Enter to publish it
+Type `/quit` to leave the chat as a client

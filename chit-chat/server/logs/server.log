@@ -1,0 +1,75 @@
+[Server] 2026/10/25 23:18:16 event=STARTUP address=:5050
+[Server] 2026/10/25 23:18:45 event=CONNECT client=Test lamport=1
+[Server] 2026/10/25 23:18:45 event=BROADCAST sender=Server lamport=2 text="Participant Test joined Chit Chat at logical time 2"
+[Server] 2026/10/25 23:18:45 event=DELIVER client=Test lamport=2
+[Server] 2026/10/25 23:18:57 event=CONNECT client=Test2 lamport=1
+[Server] 2026/10/25 23:18:57 event=BROADCAST sender=Server lamport=3 text="Participant Test2 joined Chit Chat at logical time 3"
+[Server] 2026/10/25 23:18:57 event=DELIVER client=Test2 lamport=3
+[Server] 2026/10/25 23:18:57 event=DELIVER client=Test lamport=3
+[Server] 2026/10/25 23:19:09 event=CONNECT client=Test3 lamport=1
+[Server] 2026/10/25 23:19:09 event=BROADCAST sender=Server lamport=4 text="Participant Test3 joined Chit Chat at logical time 4"
+[Server] 2026/10/25 23:19:09 event=DELIVER client=Test3 lamport=4
+[Server] 2026/10/25 23:19:09 event=DELIVER client=Test lamport=4
+[Server] 2026/10/25 23:19:09 event=DELIVER client=Test2 lamport=4
+[Server] 2026/10/25 23:19:30 event=BROADCAST sender=Test lamport=7 text="hej"
+[Server] 2026/10/25 23:19:30 event=DELIVER client=Test3 lamport=7
+[Server] 2026/10/25 23:19:30 event=DELIVER client=Test lamport=7
+[Server] 2026/10/25 23:19:30 event=DELIVER client=Test2 lamport=7
+[Server] 2026/10/25 23:19:32 event=BROADCAST sender=Test2 lamport=10 text="hej"
+[Server] 2026/10/25 23:19:32 event=DELIVER client=Test lamport=10
+[Server] 2026/10/25 23:19:32 event=DELIVER client=Test3 lamport=10
+[Server] 2026/10/25 23:19:32 event=DELIVER client=Test2 lamport=10
+[Server] 2026/10/25 23:19:35 event=BROADCAST sender=Test3 lamport=13 text="hej"
+[Server] 2026/10/25 23:19:35 event=DELIVER client=Test lamport=13
+[Server] 2026/10/25 23:19:35 event=DELIVER client=Test3 lamport=13
+[Server] 2026/10/25 23:19:35 event=DELIVER client=Test2 lamport=13
+[Server] 2026/10/25 23:21:22 event=BROADCAST sender=Test2 lamport=16 text="hej"
+[Server] 2026/10/25 23:21:22 event=DELIVER client=Test lamport=16
+[Server] 2026/10/25 23:21:22 event=DELIVER client=Test2 lamport=16
+[Server] 2026/10/25 23:21:22 event=DELIVER client=Test3 lamport=16
+[Server] 2026/10/25 23:21:22 event=BROADCAST sender=Test2 lamport=19 text="hej"
+[Server] 2026/10/25 23:21:22 event=DELIVER client=Test lamport=19
+[Server] 2026/10/25 23:21:22 event=DELIVER client=Test2 lamport=19
+[Server] 2026/10/25 23:21:22 event=DELIVER client=Test3 lamport=19
+[Server] 2026/10/25 23:21:23 event=BROADCAST sender=Test2 lamport=22 text="hej"
+[Server] 2026/10/25 23:21:23 event=DELIVER client=Test lamport=22
+[Server] 2026/10/25 23:21:23 event=DELIVER client=Test3 lamport=22
+[Server] 2026/10/25 23:21:23 event=DELIVER client=Test2 lamport=22
+[Server] 2026/10/25 23:21:23 event=BROADCAST sender=Test2 lamport=25 text="hej"
+[Server] 2026/10/25 23:21:23 event=DELIVER client=Test2 lamport=25
+[Server] 2026/10/25 23:21:23 event=DELIVER client=Test3 lamport=25
+[Server] 2026/10/25 23:21:23 event=DELIVER client=Test lamport=25
+[Server] 2026/10/25 23:21:24 event=BROADCAST sender=Test2 lamport=28 text="hej"
+[Server] 2026/10/25 23:21:24 event=DELIVER client=Test3 lamport=28
+[Server] 2026/10/25 23:21:24 event=DELIVER client=Test2 lamport=28
+[Server] 2026/10/25 23:21:24 event=DELIVER client=Test lamport=28
+[Server] 2026/10/25 23:21:30 event=BROADCAST sender=Test lamport=31 text="yoooooooooooooooo"
+[Server] 2026/10/25 23:21:30 event=DELIVER client=Test lamport=31
+[Server] 2026/10/25 23:21:30 event=DELIVER client=Test3 lamport=31
+[Server] 2026/10/25 23:21:30 event=DELIVER client=Test2 lamport=31
+[Server] 2026/10/25 23:21:32 event=BROADCAST sender=Test3 lamport=34 text="123123123123"
+[Server] 2026/10/25 23:21:32 event=DELIVER client=Test lamport=34
+[Server] 2026/10/25 23:21:32 event=DELIVER client=Test3 lamport=34
+[Server] 2026/10/25 23:21:32 event=DELIVER client=Test2 lamport=34
+[Server] 2026/10/25 23:21:35 event=BROADCAST sender=Test3 lamport=37 text="32132132132131"
+[Server] 2026/10/25 23:21:35 event=DELIVER client=Test lamport=37
+[Server] 2026/10/25 23:21:35 event=DELIVER client=Test3 lamport=37
+[Server] 2026/10/25 23:21:35 event=DELIVER client=Test2 lamport=37
+[Server] 2026/10/25 23:21:38 event=BROADCAST sender=Test lamport=40 text="555555555555"
+[Server] 2026/10/25 23:21:38 event=DELIVER client=Test lamport=40
+[Server] 2026/10/25 23:21:38 event=DELIVER client=Test3 lamport=40
+[Server] 2026/10/25 23:21:38 event=DELIVER client=Test2 lamport=40
+[Server] 2026/10/25 23:21:50 event=DISCONNECT client=Test3 lamport=42
+[Server] 2026/10/25 23:21:50 event=BROADCAST sender=Server lamport=43 text="Participant Test3 left Chit Chat at logical time 43"
+[Server] 2026/10/25 23:21:50 event=DELIVER client=Test2 lamport=43
+[Server] 2026/10/25 23:21:50 event=DELIVER client=Test lamport=43
+[Server] 2026/10/25 23:21:52 event=DISCONNECT client=Test lamport=45
+[Server] 2026/10/25 23:21:52 event=BROADCAST sender=Server lamport=46 text="Participant Test left Chit Chat at logical time 46"
+[Server] 2026/10/25 23:21:52 event=DELIVER client=Test2 lamport=46
+[Server] 2026/10/25 23:21:54 event=BROADCAST sender=Test2 lamport=49 text="rip"
+[Server] 2026/10/25 23:21:54 event=DELIVER client=Test2 lamport=49
+[Server] 2026/10/25 23:21:56 event=BROADCAST sender=Test2 lamport=52 text="all alone"
+[Server] 2026/10/25 23:21:56 event=DELIVER client=Test2 lamport=52
+[Server] 2026/10/25 23:21:58 event=DISCONNECT client=Test2 lamport=54
+[Server] 2026/10/25 23:21:58 event=BROADCAST sender=Server lamport=55 text="Participant Test2 left Chit Chat at logical time 55"
+[Server] 2026/10/25 23:24:16 event=SHUTDOWN

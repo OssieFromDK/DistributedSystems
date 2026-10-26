@@ -1,247 +1,97 @@
 package main
 
 import (
+	"context"
+	"fmt"
 	"io"
 	"log"
 	"net"
-	"sync"
+	"os"
+	"os/signal"
+
+	proto "chitchat/grpc"
 
 	"google.golang.org/grpc"
-
-	pb "chitchat/grpc"
 )
 
-type ChatServer struct {
-	pb.UnimplementedChatServiceServer
-
-	mutex       sync.Mutex
-	clients     map[string]chan *pb.ServerMessage
-	logicalTime int64
+type server struct {
+	proto.UnimplementedChitChatServer
+	actions chan func()
+	clients map[string]chan *proto.Message
+	lamport int64
 }
 
 func main() {
-	startServer()
-}
-
-func startServer() {
-	const port string = ":50051"
-
-	var listener net.Listener
-	var err error
-
-	listener, err = net.Listen("tcp", port)
+	os.MkdirAll("logs", 0755)
+	file, err := os.Create("logs/server.log")
 	if err != nil {
-		log.Fatal("Could not start server: ", err)
+		log.Fatal(err)
 	}
+	log.SetOutput(io.MultiWriter(os.Stdout, file))
+	log.SetPrefix("[Server] ")
 
-	var grpcServer *grpc.Server
-	grpcServer = grpc.NewServer()
-
-	var chatServer *ChatServer
-	chatServer = &ChatServer{
-		clients: make(map[string]chan *pb.ServerMessage),
-	}
-
-	pb.RegisterChatServiceServer(grpcServer, chatServer)
-
-	log.Println("Chat server running on port 50051")
-
-	err = grpcServer.Serve(listener)
-	if err != nil {
-		log.Fatal("Server stopped unexpectedly: ", err)
-	}
-}
-
-func (server *ChatServer) Connect(
-	stream grpc.BidiStreamingServer[pb.ClientRequest, pb.ServerMessage],
-) error {
-	log.Println("Client connected")
-
-	var outgoing chan *pb.ServerMessage
-	outgoing = make(chan *pb.ServerMessage, 32)
-
-	var clientID string
-	var registered bool
-	registered = false
+	s := &server{actions: make(chan func()), clients: make(map[string]chan *proto.Message)}
 
 	go func() {
-		for message := range outgoing {
-			var sendErr error
-			sendErr = stream.Send(message)
-			if sendErr != nil {
-				log.Println("Could not send message to client:", sendErr)
-				return
-			}
+		for action := range s.actions {
+			action()
 		}
 	}()
 
-	defer func() {
-		if registered {
-			server.removeClient(clientID, outgoing)
-		} else {
-			close(outgoing)
-		}
-	}()
-
-	for {
-		var request *pb.ClientRequest
-		var err error
-
-		request, err = stream.Recv()
-		if err != nil {
-			if err == io.EOF {
-				log.Println("Client closed its stream")
-			} else {
-				log.Println("Client disconnected:", err)
-			}
-			return nil
-		}
-
-		log.Println(
-			"Received request from client:",
-			request.GetClientId(),
-		)
-
-		switch request.GetAction() {
-		case pb.Action_JOIN:
-			if registered {
-				continue
-			}
-
-			clientID = request.GetClientId()
-			if clientID == "" {
-				outgoing <- &pb.ServerMessage{
-					Content:   "Client ID cannot be empty.",
-					EventType: "ERROR",
-				}
-				return nil
-			}
-
-			server.mutex.Lock()
-
-			_, exists := server.clients[clientID]
-			if exists {
-				server.mutex.Unlock()
-
-				outgoing <- &pb.ServerMessage{
-					Content:   "That client ID is already in use.",
-					EventType: "ERROR",
-				}
-				return nil
-			}
-
-			server.clients[clientID] = outgoing
-			registered = true
-
-			server.logicalTime++
-			outgoing <- &pb.ServerMessage{
-				ClientId:    "Server",
-				Content:     "Welcome to Chit Chat!",
-				LogicalTime: server.logicalTime,
-				EventType:   "WELCOME",
-			}
-
-			server.logicalTime++
-			var joinMessage *pb.ServerMessage
-			joinMessage = &pb.ServerMessage{
-				ClientId:    clientID,
-				Content:     clientID + " joined the chat.",
-				LogicalTime: server.logicalTime,
-				EventType:   "JOIN",
-			}
-
-			server.broadcastLocked(joinMessage)
-			server.mutex.Unlock()
-
-			log.Println("Client joined:", clientID)
-
-		case pb.Action_PUBLISH:
-			if !registered {
-				outgoing <- &pb.ServerMessage{
-					Content:   "Join the chat before sending messages.",
-					EventType: "ERROR",
-				}
-				continue
-			}
-
-			server.broadcast(
-				"PUBLISH",
-				clientID,
-				request.GetContent(),
-			)
-
-		case pb.Action_LEAVE:
-			if registered {
-				server.removeClient(clientID, outgoing)
-				registered = false
-			}
-			return nil
-
-		default:
-			log.Println("Received an unknown action from:", request.GetClientId())
-		}
+	listener, err := net.Listen("tcp", ":5050")
+	if err != nil {
+		log.Fatal(err)
 	}
+	grpcServer := grpc.NewServer()
+	proto.RegisterChitChatServer(grpcServer, s)
+
+	log.Println("event=STARTUP address=:5050")
+	go grpcServer.Serve(listener)
+
+	stop := make(chan os.Signal, 1)
+	signal.Notify(stop, os.Interrupt)
+	<-stop
+	log.Println("event=SHUTDOWN")
 }
 
-func (server *ChatServer) broadcast(
-	eventType string,
-	clientID string,
-	content string,
-) {
-	server.mutex.Lock()
-	defer server.mutex.Unlock()
-
-	server.logicalTime++
-
-	var message *pb.ServerMessage
-	message = &pb.ServerMessage{
-		ClientId:    clientID,
-		Content:     content,
-		LogicalTime: server.logicalTime,
-		EventType:   eventType,
+func (s *server) Join(req *proto.Message, stream proto.ChitChat_JoinServer) error {
+	log.Printf("event=CONNECT client=%s lamport=%d", req.Sender, req.Lamport)
+	out := make(chan *proto.Message, 100)
+	s.actions <- func() {
+		s.clients[req.Sender] = out
+		s.lamport = max(s.lamport, req.Lamport) + 1
+		s.broadcast("Server", fmt.Sprintf("Participant %s joined Chit Chat at logical time %d", req.Sender, s.lamport))
 	}
 
-	server.broadcastLocked(message)
+	for msg := range out {
+		stream.Send(msg)
+		log.Printf("event=DELIVER client=%s lamport=%d", req.Sender, msg.Lamport)
+	}
+	return nil
 }
 
-func (server *ChatServer) broadcastLocked(message *pb.ServerMessage) {
-	for clientID, outgoing := range server.clients {
-		select {
-		case outgoing <- message:
-		default:
-			log.Println("Outgoing queue full for client:", clientID)
-		}
+func (s *server) Publish(ctx context.Context, msg *proto.Message) (*proto.Empty, error) {
+	s.actions <- func() {
+		s.lamport = max(s.lamport, msg.Lamport) + 1
+		s.broadcast(msg.Sender, msg.Text)
 	}
+	return &proto.Empty{}, nil
 }
 
-// removeClient removes a client
-func (server *ChatServer) removeClient(
-	clientID string,
-	outgoing chan *pb.ServerMessage,
-) {
-	server.mutex.Lock()
-	defer server.mutex.Unlock()
-
-	currentChannel, exists := server.clients[clientID]
-	if !exists || currentChannel != outgoing {
-		close(outgoing)
-		return
+func (s *server) Leave(ctx context.Context, msg *proto.Message) (*proto.Empty, error) {
+	log.Printf("event=DISCONNECT client=%s lamport=%d", msg.Sender, msg.Lamport)
+	s.actions <- func() {
+		close(s.clients[msg.Sender])
+		delete(s.clients, msg.Sender)
+		s.lamport = max(s.lamport, msg.Lamport) + 1
+		s.broadcast("Server", fmt.Sprintf("Participant %s left Chit Chat at logical time %d", msg.Sender, s.lamport))
 	}
+	return &proto.Empty{}, nil
+}
 
-	delete(server.clients, clientID)
-	close(outgoing)
-
-	server.logicalTime++
-
-	var leaveMessage *pb.ServerMessage
-	leaveMessage = &pb.ServerMessage{
-		ClientId:    clientID,
-		Content:     clientID + " left the chat.",
-		LogicalTime: server.logicalTime,
-		EventType:   "LEAVE",
+func (s *server) broadcast(sender, text string) {
+	log.Printf("event=BROADCAST sender=%s lamport=%d text=%q", sender, s.lamport, text)
+	for _, out := range s.clients {
+		out <- &proto.Message{Sender: sender, Text: text, Lamport: s.lamport}
 	}
-
-	server.broadcastLocked(leaveMessage)
-
-	log.Println("Client left:", clientID)
 }
