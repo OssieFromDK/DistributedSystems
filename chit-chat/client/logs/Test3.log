@@ -1,0 +1,18 @@
+[Client] 2026/10/25 23:19:09 event=CONNECT client=Test3
+[Client] 2026/10/25 23:19:09 event=RECEIVE client=Test3 sender=Server lamport=4 local=5 text="Participant Test3 joined Chit Chat at logical time 4"
+[Client] 2026/10/25 23:19:30 event=RECEIVE client=Test3 sender=Test lamport=7 local=8 text="hej"
+[Client] 2026/10/25 23:19:32 event=RECEIVE client=Test3 sender=Test2 lamport=10 local=11 text="hej"
+[Client] 2026/10/25 23:19:35 event=PUBLISH client=Test3 lamport=12 text="hej"
+[Client] 2026/10/25 23:19:35 event=RECEIVE client=Test3 sender=Test3 lamport=13 local=14 text="hej"
+[Client] 2026/10/25 23:21:22 event=RECEIVE client=Test3 sender=Test2 lamport=16 local=17 text="hej"
+[Client] 2026/10/25 23:21:22 event=RECEIVE client=Test3 sender=Test2 lamport=19 local=20 text="hej"
+[Client] 2026/10/25 23:21:23 event=RECEIVE client=Test3 sender=Test2 lamport=22 local=23 text="hej"
+[Client] 2026/10/25 23:21:23 event=RECEIVE client=Test3 sender=Test2 lamport=25 local=26 text="hej"
+[Client] 2026/10/25 23:21:24 event=RECEIVE client=Test3 sender=Test2 lamport=28 local=29 text="hej"
+[Client] 2026/10/25 23:21:30 event=RECEIVE client=Test3 sender=Test lamport=31 local=32 text="yoooooooooooooooo"
+[Client] 2026/10/25 23:21:32 event=PUBLISH client=Test3 lamport=33 text="123123123123"
+[Client] 2026/10/25 23:21:32 event=RECEIVE client=Test3 sender=Test3 lamport=34 local=35 text="123123123123"
+[Client] 2026/10/25 23:21:35 event=PUBLISH client=Test3 lamport=36 text="32132132132131"
+[Client] 2026/10/25 23:21:35 event=RECEIVE client=Test3 sender=Test3 lamport=37 local=38 text="32132132132131"
+[Client] 2026/10/25 23:21:38 event=RECEIVE client=Test3 sender=Test lamport=40 local=41 text="555555555555"
+[Client] 2026/10/25 23:21:50 event=DISCONNECT client=Test3

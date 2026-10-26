@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "chitchat/grpc/proto";
+
+service ChitChat {
+  rpc Join(Message) returns (stream Message);
+  rpc Publish(Message) returns (Empty);
+  rpc Leave(Message) returns (Empty);
+}
+
+message Message {
+  string sender = 1;
+  string text = 2;
+  int64 lamport = 3;
+}
+
+message Empty {}
