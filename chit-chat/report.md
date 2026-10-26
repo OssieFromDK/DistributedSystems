@@ -1,5 +1,8 @@
 # Report
 
+## Code Source Repo
+https://github.com/OssieFromDK/DistributedSystems/tree/main/chit-chat
+
 ## Discuss, whether you are going to use server-side streaming, client-side streaming, or bidirectional streaming?
 
 We use server-side streaming because when a client joins, it makes a Join call once, and the server then keeps that stream open for as long as the client is connected and all broadcasts are sent to the client through that stream. As an example client A calls Publish with "Hello", and the server sends that message through the stream of every active client, including A's own so everyone recieves it.
