@@ -1,0 +1,993 @@
+2026/11/08 21:48:31.339760 [Node 3] event=STARTUP address=localhost:5003 peers=2
+2026/11/08 21:48:31.800801 [Node 3] event=RECEIVE_REQUEST from=2 lamport=1 local=2 state=RELEASED
+2026/11/08 21:48:31.800801 [Node 3] event=SEND_REPLY to=2 lamport=3
+2026/11/08 21:48:31.897149 [Node 3] event=RECEIVE_REQUEST from=1 lamport=4 local=5 state=RELEASED
+2026/11/08 21:48:31.898150 [Node 3] event=SEND_REPLY to=1 lamport=6
+2026/11/08 21:48:33.484288 [Node 3] event=REQUEST_CS lamport=7
+2026/11/08 21:48:33.484288 [Node 3] event=SEND_REQUEST to=1 lamport=7
+2026/11/08 21:48:33.484288 [Node 3] event=SEND_REQUEST to=2 lamport=7
+2026/11/08 21:48:33.486073 [Node 3] event=RECEIVE_REPLY from=2 lamport=9 local=10 replies=1/2
+2026/11/08 21:48:33.802864 [Node 3] event=RECEIVE_REPLY from=1 lamport=10 local=11 replies=2/2
+2026/11/08 21:48:33.802864 [Node 3] event=ENTER_CS lamport=11
+2026/11/08 21:48:33.946452 [Node 3] event=RECEIVE_REQUEST from=2 lamport=10 local=12 state=HELD
+2026/11/08 21:48:33.946452 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:48:34.804571 [Node 3] event=EXIT_CS lamport=12 deferred=1
+2026/11/08 21:48:34.804571 [Node 3] event=SEND_REPLY to=2 lamport=13
+2026/11/08 21:48:35.152282 [Node 3] event=RECEIVE_REQUEST from=1 lamport=13 local=14 state=RELEASED
+2026/11/08 21:48:35.152835 [Node 3] event=SEND_REPLY to=1 lamport=15
+2026/11/08 21:48:36.758053 [Node 3] event=REQUEST_CS lamport=16
+2026/11/08 21:48:36.758110 [Node 3] event=SEND_REQUEST to=1 lamport=16
+2026/11/08 21:48:36.758110 [Node 3] event=SEND_REQUEST to=2 lamport=16
+2026/11/08 21:48:36.758632 [Node 3] event=RECEIVE_REPLY from=2 lamport=18 local=19 replies=1/2
+2026/11/08 21:48:36.805787 [Node 3] event=RECEIVE_REPLY from=1 lamport=19 local=20 replies=2/2
+2026/11/08 21:48:36.805787 [Node 3] event=ENTER_CS lamport=20
+2026/11/08 21:48:37.806091 [Node 3] event=EXIT_CS lamport=20 deferred=0
+2026/11/08 21:48:38.236784 [Node 3] event=RECEIVE_REQUEST from=2 lamport=19 local=21 state=RELEASED
+2026/11/08 21:48:38.236784 [Node 3] event=SEND_REPLY to=2 lamport=22
+2026/11/08 21:48:39.961400 [Node 3] event=RECEIVE_REQUEST from=1 lamport=22 local=23 state=RELEASED
+2026/11/08 21:48:39.961400 [Node 3] event=SEND_REPLY to=1 lamport=24
+2026/11/08 21:48:40.054925 [Node 3] event=REQUEST_CS lamport=25
+2026/11/08 21:48:40.054925 [Node 3] event=SEND_REQUEST to=1 lamport=25
+2026/11/08 21:48:40.054925 [Node 3] event=SEND_REQUEST to=2 lamport=25
+2026/11/08 21:48:40.055855 [Node 3] event=RECEIVE_REPLY from=2 lamport=28 local=29 replies=1/2
+2026/11/08 21:48:40.962924 [Node 3] event=RECEIVE_REPLY from=1 lamport=29 local=30 replies=2/2
+2026/11/08 21:48:40.962924 [Node 3] event=ENTER_CS lamport=30
+2026/11/08 21:48:41.963094 [Node 3] event=EXIT_CS lamport=30 deferred=0
+2026/11/08 21:48:42.037145 [Node 3] event=RECEIVE_REQUEST from=2 lamport=29 local=31 state=RELEASED
+2026/11/08 21:48:42.037145 [Node 3] event=SEND_REPLY to=2 lamport=32
+2026/11/08 21:48:43.447654 [Node 3] event=REQUEST_CS lamport=33
+2026/11/08 21:48:43.447654 [Node 3] event=SEND_REQUEST to=1 lamport=33
+2026/11/08 21:48:43.447654 [Node 3] event=SEND_REQUEST to=2 lamport=33
+2026/11/08 21:48:43.448653 [Node 3] event=RECEIVE_REPLY from=2 lamport=35 local=36 replies=1/2
+2026/11/08 21:48:43.448653 [Node 3] event=RECEIVE_REPLY from=1 lamport=35 local=37 replies=2/2
+2026/11/08 21:48:43.448653 [Node 3] event=ENTER_CS lamport=37
+2026/11/08 21:48:43.970199 [Node 3] event=RECEIVE_REQUEST from=1 lamport=36 local=38 state=HELD
+2026/11/08 21:48:43.970199 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:48:44.449919 [Node 3] event=EXIT_CS lamport=38 deferred=1
+2026/11/08 21:48:44.449919 [Node 3] event=SEND_REPLY to=1 lamport=39
+2026/11/08 21:48:45.740213 [Node 3] event=RECEIVE_REQUEST from=2 lamport=39 local=40 state=RELEASED
+2026/11/08 21:48:45.740213 [Node 3] event=SEND_REPLY to=2 lamport=41
+2026/11/08 21:48:45.859283 [Node 3] event=REQUEST_CS lamport=42
+2026/11/08 21:48:45.859283 [Node 3] event=SEND_REQUEST to=1 lamport=42
+2026/11/08 21:48:45.859283 [Node 3] event=SEND_REQUEST to=2 lamport=42
+2026/11/08 21:48:45.859942 [Node 3] event=RECEIVE_REPLY from=1 lamport=44 local=45 replies=1/2
+2026/11/08 21:48:46.741925 [Node 3] event=RECEIVE_REPLY from=2 lamport=46 local=47 replies=2/2
+2026/11/08 21:48:46.741925 [Node 3] event=ENTER_CS lamport=47
+2026/11/08 21:48:47.095362 [Node 3] event=RECEIVE_REQUEST from=1 lamport=45 local=48 state=HELD
+2026/11/08 21:48:47.095362 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:48:47.742785 [Node 3] event=EXIT_CS lamport=48 deferred=1
+2026/11/08 21:48:47.742785 [Node 3] event=SEND_REPLY to=1 lamport=49
+2026/11/08 21:48:48.213898 [Node 3] event=RECEIVE_REQUEST from=2 lamport=49 local=50 state=RELEASED
+2026/11/08 21:48:48.213898 [Node 3] event=SEND_REPLY to=2 lamport=51
+2026/11/08 21:48:49.449148 [Node 3] event=REQUEST_CS lamport=52
+2026/11/08 21:48:49.449148 [Node 3] event=SEND_REQUEST to=1 lamport=52
+2026/11/08 21:48:49.449148 [Node 3] event=SEND_REQUEST to=2 lamport=52
+2026/11/08 21:48:49.449148 [Node 3] event=RECEIVE_REPLY from=1 lamport=54 local=55 replies=1/2
+2026/11/08 21:48:49.745332 [Node 3] event=RECEIVE_REPLY from=2 lamport=55 local=56 replies=2/2
+2026/11/08 21:48:49.745332 [Node 3] event=ENTER_CS lamport=56
+2026/11/08 21:48:50.746880 [Node 3] event=EXIT_CS lamport=56 deferred=0
+2026/11/08 21:48:51.229880 [Node 3] event=RECEIVE_REQUEST from=1 lamport=55 local=57 state=RELEASED
+2026/11/08 21:48:51.229880 [Node 3] event=SEND_REPLY to=1 lamport=58
+2026/11/08 21:48:52.287606 [Node 3] event=REQUEST_CS lamport=59
+2026/11/08 21:48:52.287606 [Node 3] event=SEND_REQUEST to=1 lamport=59
+2026/11/08 21:48:52.287606 [Node 3] event=SEND_REQUEST to=2 lamport=59
+2026/11/08 21:48:52.287606 [Node 3] event=RECEIVE_REPLY from=1 lamport=61 local=62 replies=1/2
+2026/11/08 21:48:52.287606 [Node 3] event=RECEIVE_REPLY from=2 lamport=61 local=63 replies=2/2
+2026/11/08 21:48:52.287606 [Node 3] event=ENTER_CS lamport=63
+2026/11/08 21:48:53.076607 [Node 3] event=RECEIVE_REQUEST from=2 lamport=62 local=64 state=HELD
+2026/11/08 21:48:53.076607 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:48:53.288674 [Node 3] event=EXIT_CS lamport=64 deferred=1
+2026/11/08 21:48:53.288674 [Node 3] event=SEND_REPLY to=2 lamport=65
+2026/11/08 21:48:53.866702 [Node 3] event=RECEIVE_REQUEST from=1 lamport=65 local=66 state=RELEASED
+2026/11/08 21:48:53.866702 [Node 3] event=SEND_REPLY to=1 lamport=67
+2026/11/08 21:48:55.402492 [Node 3] event=REQUEST_CS lamport=68
+2026/11/08 21:48:55.402492 [Node 3] event=SEND_REQUEST to=1 lamport=68
+2026/11/08 21:48:55.402492 [Node 3] event=SEND_REQUEST to=2 lamport=68
+2026/11/08 21:48:55.402492 [Node 3] event=RECEIVE_REPLY from=1 lamport=71 local=72 replies=1/2
+2026/11/08 21:48:55.402492 [Node 3] event=RECEIVE_REPLY from=2 lamport=70 local=73 replies=2/2
+2026/11/08 21:48:55.402492 [Node 3] event=ENTER_CS lamport=73
+2026/11/08 21:48:56.403339 [Node 3] event=EXIT_CS lamport=73 deferred=0
+2026/11/08 21:48:57.588557 [Node 3] event=RECEIVE_REQUEST from=1 lamport=72 local=74 state=RELEASED
+2026/11/08 21:48:57.588557 [Node 3] event=SEND_REPLY to=1 lamport=75
+2026/11/08 21:48:58.099310 [Node 3] event=RECEIVE_REQUEST from=2 lamport=75 local=76 state=RELEASED
+2026/11/08 21:48:58.099310 [Node 3] event=SEND_REPLY to=2 lamport=77
+2026/11/08 21:48:59.650893 [Node 3] event=REQUEST_CS lamport=78
+2026/11/08 21:48:59.650893 [Node 3] event=SEND_REQUEST to=1 lamport=78
+2026/11/08 21:48:59.650893 [Node 3] event=SEND_REQUEST to=2 lamport=78
+2026/11/08 21:48:59.650893 [Node 3] event=RECEIVE_REPLY from=2 lamport=82 local=83 replies=1/2
+2026/11/08 21:48:59.650893 [Node 3] event=RECEIVE_REPLY from=1 lamport=81 local=84 replies=2/2
+2026/11/08 21:48:59.650893 [Node 3] event=ENTER_CS lamport=84
+2026/11/08 21:48:59.682893 [Node 3] event=RECEIVE_REQUEST from=1 lamport=82 local=85 state=HELD
+2026/11/08 21:48:59.682893 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:49:00.651894 [Node 3] event=EXIT_CS lamport=85 deferred=1
+2026/11/08 21:49:00.651894 [Node 3] event=SEND_REPLY to=1 lamport=86
+2026/11/08 21:49:01.614867 [Node 3] event=RECEIVE_REQUEST from=2 lamport=85 local=87 state=RELEASED
+2026/11/08 21:49:01.614867 [Node 3] event=SEND_REPLY to=2 lamport=88
+2026/11/08 21:49:04.278450 [Node 3] event=REQUEST_CS lamport=89
+2026/11/08 21:49:04.278450 [Node 3] event=SEND_REQUEST to=1 lamport=89
+2026/11/08 21:49:04.278450 [Node 3] event=SEND_REQUEST to=2 lamport=89
+2026/11/08 21:49:04.278450 [Node 3] event=RECEIVE_REPLY from=1 lamport=91 local=92 replies=1/2
+2026/11/08 21:49:04.279452 [Node 3] event=RECEIVE_REPLY from=2 lamport=92 local=93 replies=2/2
+2026/11/08 21:49:04.279452 [Node 3] event=ENTER_CS lamport=93
+2026/11/08 21:49:04.588451 [Node 3] event=RECEIVE_REQUEST from=1 lamport=92 local=94 state=HELD
+2026/11/08 21:49:04.588451 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:49:05.280415 [Node 3] event=EXIT_CS lamport=94 deferred=1
+2026/11/08 21:49:05.280415 [Node 3] event=SEND_REPLY to=1 lamport=95
+2026/11/08 21:49:05.786484 [Node 3] event=RECEIVE_REQUEST from=2 lamport=95 local=96 state=RELEASED
+2026/11/08 21:49:05.786988 [Node 3] event=SEND_REPLY to=2 lamport=97
+2026/11/08 21:49:06.726069 [Node 3] event=REQUEST_CS lamport=98
+2026/11/08 21:49:06.726118 [Node 3] event=SEND_REQUEST to=1 lamport=98
+2026/11/08 21:49:06.726118 [Node 3] event=SEND_REQUEST to=2 lamport=98
+2026/11/08 21:49:06.726650 [Node 3] event=RECEIVE_REPLY from=1 lamport=100 local=101 replies=1/2
+2026/11/08 21:49:07.282112 [Node 3] event=RECEIVE_REPLY from=2 lamport=101 local=102 replies=2/2
+2026/11/08 21:49:07.282112 [Node 3] event=ENTER_CS lamport=102
+2026/11/08 21:49:08.282626 [Node 3] event=EXIT_CS lamport=102 deferred=0
+2026/11/08 21:49:08.570309 [Node 3] event=RECEIVE_REQUEST from=1 lamport=101 local=103 state=RELEASED
+2026/11/08 21:49:08.570835 [Node 3] event=SEND_REPLY to=1 lamport=104
+2026/11/08 21:49:09.828145 [Node 3] event=REQUEST_CS lamport=105
+2026/11/08 21:49:09.828145 [Node 3] event=SEND_REQUEST to=1 lamport=105
+2026/11/08 21:49:09.828145 [Node 3] event=SEND_REQUEST to=2 lamport=105
+2026/11/08 21:49:09.828743 [Node 3] event=RECEIVE_REPLY from=2 lamport=107 local=108 replies=1/2
+2026/11/08 21:49:09.828743 [Node 3] event=RECEIVE_REPLY from=1 lamport=108 local=109 replies=2/2
+2026/11/08 21:49:09.828743 [Node 3] event=ENTER_CS lamport=109
+2026/11/08 21:49:10.828784 [Node 3] event=EXIT_CS lamport=109 deferred=0
+2026/11/08 21:49:10.941783 [Node 3] event=RECEIVE_REQUEST from=2 lamport=108 local=110 state=RELEASED
+2026/11/08 21:49:10.941783 [Node 3] event=SEND_REPLY to=2 lamport=111
+2026/11/08 21:49:11.700783 [Node 3] event=RECEIVE_REQUEST from=1 lamport=111 local=112 state=RELEASED
+2026/11/08 21:49:11.700783 [Node 3] event=SEND_REPLY to=1 lamport=113
+2026/11/08 21:49:13.886785 [Node 3] event=REQUEST_CS lamport=114
+2026/11/08 21:49:13.886785 [Node 3] event=SEND_REQUEST to=1 lamport=114
+2026/11/08 21:49:13.886785 [Node 3] event=SEND_REQUEST to=2 lamport=114
+2026/11/08 21:49:13.886785 [Node 3] event=RECEIVE_REPLY from=1 lamport=118 local=119 replies=1/2
+2026/11/08 21:49:13.887784 [Node 3] event=RECEIVE_REPLY from=2 lamport=117 local=120 replies=2/2
+2026/11/08 21:49:13.887784 [Node 3] event=ENTER_CS lamport=120
+2026/11/08 21:49:14.228215 [Node 3] event=RECEIVE_REQUEST from=2 lamport=118 local=121 state=HELD
+2026/11/08 21:49:14.228215 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:49:14.473214 [Node 3] event=RECEIVE_REQUEST from=1 lamport=121 local=122 state=HELD
+2026/11/08 21:49:14.473214 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:49:14.889214 [Node 3] event=EXIT_CS lamport=122 deferred=2
+2026/11/08 21:49:14.889214 [Node 3] event=SEND_REPLY to=1 lamport=123
+2026/11/08 21:49:14.889214 [Node 3] event=SEND_REPLY to=2 lamport=124
+2026/11/08 21:49:17.160999 [Node 3] event=REQUEST_CS lamport=125
+2026/11/08 21:49:17.160999 [Node 3] event=SEND_REQUEST to=1 lamport=125
+2026/11/08 21:49:17.160999 [Node 3] event=SEND_REQUEST to=2 lamport=125
+2026/11/08 21:49:17.161578 [Node 3] event=RECEIVE_REPLY from=2 lamport=128 local=129 replies=1/2
+2026/11/08 21:49:17.161578 [Node 3] event=RECEIVE_REPLY from=1 lamport=129 local=130 replies=2/2
+2026/11/08 21:49:17.161578 [Node 3] event=ENTER_CS lamport=130
+2026/11/08 21:49:18.162291 [Node 3] event=EXIT_CS lamport=130 deferred=0
+2026/11/08 21:49:19.579330 [Node 3] event=RECEIVE_REQUEST from=1 lamport=130 local=131 state=RELEASED
+2026/11/08 21:49:19.579330 [Node 3] event=SEND_REPLY to=1 lamport=132
+2026/11/08 21:49:19.772539 [Node 3] event=RECEIVE_REQUEST from=2 lamport=133 local=134 state=RELEASED
+2026/11/08 21:49:19.772539 [Node 3] event=SEND_REPLY to=2 lamport=135
+2026/11/08 21:49:20.948917 [Node 3] event=REQUEST_CS lamport=136
+2026/11/08 21:49:20.948917 [Node 3] event=SEND_REQUEST to=1 lamport=136
+2026/11/08 21:49:20.948917 [Node 3] event=SEND_REQUEST to=2 lamport=136
+2026/11/08 21:49:20.948917 [Node 3] event=RECEIVE_REPLY from=1 lamport=138 local=139 replies=1/2
+2026/11/08 21:49:21.582207 [Node 3] event=RECEIVE_REPLY from=2 lamport=139 local=140 replies=2/2
+2026/11/08 21:49:21.582207 [Node 3] event=ENTER_CS lamport=140
+2026/11/08 21:49:22.583837 [Node 3] event=EXIT_CS lamport=140 deferred=0
+2026/11/08 21:49:23.396838 [Node 3] event=RECEIVE_REQUEST from=1 lamport=139 local=141 state=RELEASED
+2026/11/08 21:49:23.397455 [Node 3] event=SEND_REPLY to=1 lamport=142
+2026/11/08 21:49:23.882497 [Node 3] event=REQUEST_CS lamport=143
+2026/11/08 21:49:23.882563 [Node 3] event=SEND_REQUEST to=1 lamport=143
+2026/11/08 21:49:23.882563 [Node 3] event=SEND_REQUEST to=2 lamport=143
+2026/11/08 21:49:23.883087 [Node 3] event=RECEIVE_REPLY from=2 lamport=145 local=146 replies=1/2
+2026/11/08 21:49:23.897211 [Node 3] event=RECEIVE_REQUEST from=2 lamport=146 local=147 state=WANTED
+2026/11/08 21:49:23.897211 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:49:24.398741 [Node 3] event=RECEIVE_REPLY from=1 lamport=149 local=150 replies=2/2
+2026/11/08 21:49:24.398741 [Node 3] event=ENTER_CS lamport=150
+2026/11/08 21:49:25.399080 [Node 3] event=EXIT_CS lamport=150 deferred=1
+2026/11/08 21:49:25.399080 [Node 3] event=SEND_REPLY to=2 lamport=151
+2026/11/08 21:49:27.834612 [Node 3] event=REQUEST_CS lamport=152
+2026/11/08 21:49:27.834612 [Node 3] event=SEND_REQUEST to=1 lamport=152
+2026/11/08 21:49:27.834612 [Node 3] event=SEND_REQUEST to=2 lamport=152
+2026/11/08 21:49:27.835329 [Node 3] event=RECEIVE_REPLY from=2 lamport=154 local=155 replies=1/2
+2026/11/08 21:49:27.835329 [Node 3] event=RECEIVE_REPLY from=1 lamport=154 local=156 replies=2/2
+2026/11/08 21:49:27.835329 [Node 3] event=ENTER_CS lamport=156
+2026/11/08 21:49:28.170386 [Node 3] event=RECEIVE_REQUEST from=1 lamport=155 local=157 state=HELD
+2026/11/08 21:49:28.170386 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:49:28.836313 [Node 3] event=EXIT_CS lamport=157 deferred=1
+2026/11/08 21:49:28.836313 [Node 3] event=SEND_REPLY to=1 lamport=158
+2026/11/08 21:49:29.309702 [Node 3] event=RECEIVE_REQUEST from=2 lamport=158 local=159 state=RELEASED
+2026/11/08 21:49:29.309702 [Node 3] event=SEND_REPLY to=2 lamport=160
+2026/11/08 21:49:31.660819 [Node 3] event=REQUEST_CS lamport=161
+2026/11/08 21:49:31.660819 [Node 3] event=SEND_REQUEST to=2 lamport=161
+2026/11/08 21:49:31.660819 [Node 3] event=SEND_REQUEST to=1 lamport=161
+2026/11/08 21:49:31.661682 [Node 3] event=RECEIVE_REPLY from=1 lamport=163 local=164 replies=1/2
+2026/11/08 21:49:31.661682 [Node 3] event=RECEIVE_REPLY from=2 lamport=164 local=165 replies=2/2
+2026/11/08 21:49:31.661682 [Node 3] event=ENTER_CS lamport=165
+2026/11/08 21:49:32.662365 [Node 3] event=EXIT_CS lamport=165 deferred=0
+2026/11/08 21:49:33.609940 [Node 3] event=RECEIVE_REQUEST from=1 lamport=164 local=166 state=RELEASED
+2026/11/08 21:49:33.609940 [Node 3] event=SEND_REPLY to=1 lamport=167
+2026/11/08 21:49:34.316255 [Node 3] event=RECEIVE_REQUEST from=2 lamport=167 local=168 state=RELEASED
+2026/11/08 21:49:34.316255 [Node 3] event=SEND_REPLY to=2 lamport=169
+2026/11/08 21:49:35.650781 [Node 3] event=REQUEST_CS lamport=170
+2026/11/08 21:49:35.650781 [Node 3] event=SEND_REQUEST to=1 lamport=170
+2026/11/08 21:49:35.650781 [Node 3] event=SEND_REQUEST to=2 lamport=170
+2026/11/08 21:49:35.650781 [Node 3] event=RECEIVE_REPLY from=2 lamport=173 local=174 replies=1/2
+2026/11/08 21:49:35.650781 [Node 3] event=RECEIVE_REPLY from=1 lamport=172 local=175 replies=2/2
+2026/11/08 21:49:35.650781 [Node 3] event=ENTER_CS lamport=175
+2026/11/08 21:49:36.405970 [Node 3] event=RECEIVE_REQUEST from=1 lamport=173 local=176 state=HELD
+2026/11/08 21:49:36.405970 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:49:36.652969 [Node 3] event=EXIT_CS lamport=176 deferred=1
+2026/11/08 21:49:36.652969 [Node 3] event=SEND_REPLY to=1 lamport=177
+2026/11/08 21:49:38.729037 [Node 3] event=RECEIVE_REQUEST from=1 lamport=179 local=180 state=RELEASED
+2026/11/08 21:49:38.729037 [Node 3] event=SEND_REPLY to=1 lamport=181
+2026/11/08 21:49:39.228496 [Node 3] event=RECEIVE_REQUEST from=2 lamport=182 local=183 state=RELEASED
+2026/11/08 21:49:39.228496 [Node 3] event=SEND_REPLY to=2 lamport=184
+2026/11/08 21:49:39.780758 [Node 3] event=REQUEST_CS lamport=185
+2026/11/08 21:49:39.780758 [Node 3] event=SEND_REQUEST to=1 lamport=185
+2026/11/08 21:49:39.780758 [Node 3] event=SEND_REQUEST to=2 lamport=185
+2026/11/08 21:49:39.780758 [Node 3] event=RECEIVE_REPLY from=1 lamport=187 local=188 replies=1/2
+2026/11/08 21:49:40.730288 [Node 3] event=RECEIVE_REPLY from=2 lamport=188 local=189 replies=2/2
+2026/11/08 21:49:40.730288 [Node 3] event=ENTER_CS lamport=189
+2026/11/08 21:49:41.730548 [Node 3] event=EXIT_CS lamport=189 deferred=0
+2026/11/08 21:49:42.308091 [Node 3] event=RECEIVE_REQUEST from=1 lamport=188 local=190 state=RELEASED
+2026/11/08 21:49:42.308091 [Node 3] event=SEND_REPLY to=1 lamport=191
+2026/11/08 21:49:43.605729 [Node 3] event=RECEIVE_REQUEST from=2 lamport=191 local=192 state=RELEASED
+2026/11/08 21:49:43.605729 [Node 3] event=SEND_REPLY to=2 lamport=193
+2026/11/08 21:49:44.261728 [Node 3] event=REQUEST_CS lamport=194
+2026/11/08 21:49:44.261728 [Node 3] event=SEND_REQUEST to=1 lamport=194
+2026/11/08 21:49:44.261728 [Node 3] event=SEND_REQUEST to=2 lamport=194
+2026/11/08 21:49:44.261728 [Node 3] event=RECEIVE_REPLY from=1 lamport=196 local=197 replies=1/2
+2026/11/08 21:49:44.607729 [Node 3] event=RECEIVE_REPLY from=2 lamport=198 local=199 replies=2/2
+2026/11/08 21:49:44.607729 [Node 3] event=ENTER_CS lamport=199
+2026/11/08 21:49:44.914259 [Node 3] event=RECEIVE_REQUEST from=1 lamport=197 local=200 state=HELD
+2026/11/08 21:49:44.914259 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:49:45.608261 [Node 3] event=EXIT_CS lamport=200 deferred=1
+2026/11/08 21:49:45.608261 [Node 3] event=SEND_REPLY to=1 lamport=201
+2026/11/08 21:49:46.695382 [Node 3] event=REQUEST_CS lamport=202
+2026/11/08 21:49:46.695382 [Node 3] event=SEND_REQUEST to=2 lamport=202
+2026/11/08 21:49:46.695382 [Node 3] event=SEND_REQUEST to=1 lamport=202
+2026/11/08 21:49:46.695382 [Node 3] event=RECEIVE_REPLY from=2 lamport=204 local=205 replies=1/2
+2026/11/08 21:49:46.695382 [Node 3] event=RECEIVE_REPLY from=1 lamport=204 local=206 replies=2/2
+2026/11/08 21:49:46.696395 [Node 3] event=ENTER_CS lamport=206
+2026/11/08 21:49:47.403553 [Node 3] event=RECEIVE_REQUEST from=2 lamport=205 local=207 state=HELD
+2026/11/08 21:49:47.403553 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:49:47.696634 [Node 3] event=EXIT_CS lamport=207 deferred=1
+2026/11/08 21:49:47.696634 [Node 3] event=SEND_REPLY to=2 lamport=208
+2026/11/08 21:49:47.912668 [Node 3] event=RECEIVE_REQUEST from=1 lamport=208 local=209 state=RELEASED
+2026/11/08 21:49:47.912668 [Node 3] event=SEND_REPLY to=1 lamport=210
+2026/11/08 21:49:50.583648 [Node 3] event=REQUEST_CS lamport=211
+2026/11/08 21:49:50.583648 [Node 3] event=SEND_REQUEST to=1 lamport=211
+2026/11/08 21:49:50.583648 [Node 3] event=SEND_REQUEST to=2 lamport=211
+2026/11/08 21:49:50.583648 [Node 3] event=RECEIVE_REPLY from=1 lamport=214 local=215 replies=1/2
+2026/11/08 21:49:50.583648 [Node 3] event=RECEIVE_REPLY from=2 lamport=213 local=216 replies=2/2
+2026/11/08 21:49:50.584650 [Node 3] event=ENTER_CS lamport=216
+2026/11/08 21:49:51.439324 [Node 3] event=RECEIVE_REQUEST from=2 lamport=214 local=217 state=HELD
+2026/11/08 21:49:51.439324 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:49:51.585626 [Node 3] event=EXIT_CS lamport=217 deferred=1
+2026/11/08 21:49:51.585678 [Node 3] event=SEND_REPLY to=2 lamport=218
+2026/11/08 21:49:52.155451 [Node 3] event=RECEIVE_REQUEST from=1 lamport=217 local=219 state=RELEASED
+2026/11/08 21:49:52.155451 [Node 3] event=SEND_REPLY to=1 lamport=220
+2026/11/08 21:49:54.621989 [Node 3] event=RECEIVE_REQUEST from=2 lamport=222 local=223 state=RELEASED
+2026/11/08 21:49:54.621989 [Node 3] event=SEND_REPLY to=2 lamport=224
+2026/11/08 21:49:54.935990 [Node 3] event=REQUEST_CS lamport=225
+2026/11/08 21:49:54.935990 [Node 3] event=SEND_REQUEST to=1 lamport=225
+2026/11/08 21:49:54.935990 [Node 3] event=SEND_REQUEST to=2 lamport=225
+2026/11/08 21:49:54.937060 [Node 3] event=RECEIVE_REPLY from=1 lamport=227 local=228 replies=1/2
+2026/11/08 21:49:55.623576 [Node 3] event=RECEIVE_REPLY from=2 lamport=228 local=229 replies=2/2
+2026/11/08 21:49:55.623576 [Node 3] event=ENTER_CS lamport=229
+2026/11/08 21:49:56.623969 [Node 3] event=EXIT_CS lamport=229 deferred=0
+2026/11/08 21:49:57.227981 [Node 3] event=RECEIVE_REQUEST from=1 lamport=228 local=230 state=RELEASED
+2026/11/08 21:49:57.227981 [Node 3] event=SEND_REPLY to=1 lamport=231
+2026/11/08 21:49:58.135041 [Node 3] event=RECEIVE_REQUEST from=2 lamport=231 local=232 state=RELEASED
+2026/11/08 21:49:58.135041 [Node 3] event=SEND_REPLY to=2 lamport=233
+2026/11/08 21:49:59.739551 [Node 3] event=REQUEST_CS lamport=234
+2026/11/08 21:49:59.739551 [Node 3] event=SEND_REQUEST to=1 lamport=234
+2026/11/08 21:49:59.739551 [Node 3] event=SEND_REQUEST to=2 lamport=234
+2026/11/08 21:49:59.739551 [Node 3] event=RECEIVE_REPLY from=2 lamport=238 local=239 replies=1/2
+2026/11/08 21:49:59.740552 [Node 3] event=RECEIVE_REPLY from=1 lamport=237 local=240 replies=2/2
+2026/11/08 21:49:59.740552 [Node 3] event=ENTER_CS lamport=240
+2026/11/08 21:50:00.741551 [Node 3] event=EXIT_CS lamport=240 deferred=0
+2026/11/08 21:50:01.475551 [Node 3] event=RECEIVE_REQUEST from=1 lamport=238 local=241 state=RELEASED
+2026/11/08 21:50:01.475551 [Node 3] event=SEND_REPLY to=1 lamport=242
+2026/11/08 21:50:02.384094 [Node 3] event=REQUEST_CS lamport=243
+2026/11/08 21:50:02.384094 [Node 3] event=SEND_REQUEST to=1 lamport=243
+2026/11/08 21:50:02.384094 [Node 3] event=SEND_REQUEST to=2 lamport=243
+2026/11/08 21:50:02.385034 [Node 3] event=RECEIVE_REPLY from=2 lamport=245 local=246 replies=1/2
+2026/11/08 21:50:02.477253 [Node 3] event=RECEIVE_REPLY from=1 lamport=245 local=247 replies=2/2
+2026/11/08 21:50:02.477253 [Node 3] event=ENTER_CS lamport=247
+2026/11/08 21:50:02.756389 [Node 3] event=RECEIVE_REQUEST from=2 lamport=246 local=248 state=HELD
+2026/11/08 21:50:02.756389 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:50:03.478307 [Node 3] event=EXIT_CS lamport=248 deferred=1
+2026/11/08 21:50:03.478307 [Node 3] event=SEND_REPLY to=2 lamport=249
+2026/11/08 21:50:03.561384 [Node 3] event=RECEIVE_REQUEST from=1 lamport=249 local=250 state=RELEASED
+2026/11/08 21:50:03.561384 [Node 3] event=SEND_REPLY to=1 lamport=251
+2026/11/08 21:50:06.191544 [Node 3] event=REQUEST_CS lamport=252
+2026/11/08 21:50:06.191544 [Node 3] event=SEND_REQUEST to=1 lamport=252
+2026/11/08 21:50:06.191544 [Node 3] event=SEND_REQUEST to=2 lamport=252
+2026/11/08 21:50:06.192546 [Node 3] event=RECEIVE_REPLY from=2 lamport=254 local=255 replies=1/2
+2026/11/08 21:50:06.192546 [Node 3] event=RECEIVE_REPLY from=1 lamport=255 local=256 replies=2/2
+2026/11/08 21:50:06.192546 [Node 3] event=ENTER_CS lamport=256
+2026/11/08 21:50:07.034858 [Node 3] event=RECEIVE_REQUEST from=2 lamport=255 local=257 state=HELD
+2026/11/08 21:50:07.034858 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:50:07.192859 [Node 3] event=EXIT_CS lamport=257 deferred=1
+2026/11/08 21:50:07.192859 [Node 3] event=SEND_REPLY to=2 lamport=258
+2026/11/08 21:50:09.472858 [Node 3] event=RECEIVE_REQUEST from=1 lamport=258 local=259 state=RELEASED
+2026/11/08 21:50:09.472858 [Node 3] event=SEND_REPLY to=1 lamport=260
+2026/11/08 21:50:11.005396 [Node 3] event=REQUEST_CS lamport=261
+2026/11/08 21:50:11.005396 [Node 3] event=SEND_REQUEST to=1 lamport=261
+2026/11/08 21:50:11.005396 [Node 3] event=SEND_REQUEST to=2 lamport=261
+2026/11/08 21:50:11.006396 [Node 3] event=RECEIVE_REPLY from=1 lamport=265 local=266 replies=1/2
+2026/11/08 21:50:11.006396 [Node 3] event=RECEIVE_REPLY from=2 lamport=263 local=267 replies=2/2
+2026/11/08 21:50:11.006396 [Node 3] event=ENTER_CS lamport=267
+2026/11/08 21:50:11.893394 [Node 3] event=RECEIVE_REQUEST from=2 lamport=264 local=268 state=HELD
+2026/11/08 21:50:11.893394 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:50:12.007941 [Node 3] event=EXIT_CS lamport=268 deferred=1
+2026/11/08 21:50:12.007941 [Node 3] event=SEND_REPLY to=2 lamport=269
+2026/11/08 21:50:13.579938 [Node 3] event=REQUEST_CS lamport=270
+2026/11/08 21:50:13.579938 [Node 3] event=SEND_REQUEST to=1 lamport=270
+2026/11/08 21:50:13.579938 [Node 3] event=SEND_REQUEST to=2 lamport=270
+2026/11/08 21:50:13.580941 [Node 3] event=RECEIVE_REPLY from=2 lamport=272 local=273 replies=1/2
+2026/11/08 21:50:13.580941 [Node 3] event=RECEIVE_REPLY from=1 lamport=272 local=274 replies=2/2
+2026/11/08 21:50:13.580941 [Node 3] event=ENTER_CS lamport=274
+2026/11/08 21:50:14.056938 [Node 3] event=RECEIVE_REQUEST from=1 lamport=273 local=275 state=HELD
+2026/11/08 21:50:14.056938 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:50:14.581496 [Node 3] event=EXIT_CS lamport=275 deferred=1
+2026/11/08 21:50:14.581496 [Node 3] event=SEND_REPLY to=1 lamport=276
+2026/11/08 21:50:15.910069 [Node 3] event=RECEIVE_REQUEST from=2 lamport=276 local=277 state=RELEASED
+2026/11/08 21:50:15.910069 [Node 3] event=SEND_REPLY to=2 lamport=278
+2026/11/08 21:50:16.652068 [Node 3] event=RECEIVE_REQUEST from=1 lamport=280 local=281 state=RELEASED
+2026/11/08 21:50:16.652068 [Node 3] event=SEND_REPLY to=1 lamport=282
+2026/11/08 21:50:18.016069 [Node 3] event=RECEIVE_REQUEST from=2 lamport=283 local=284 state=RELEASED
+2026/11/08 21:50:18.016069 [Node 3] event=SEND_REPLY to=2 lamport=285
+2026/11/08 21:50:18.124070 [Node 3] event=REQUEST_CS lamport=286
+2026/11/08 21:50:18.124070 [Node 3] event=SEND_REQUEST to=1 lamport=286
+2026/11/08 21:50:18.124070 [Node 3] event=SEND_REQUEST to=2 lamport=286
+2026/11/08 21:50:18.124070 [Node 3] event=RECEIVE_REPLY from=1 lamport=288 local=289 replies=1/2
+2026/11/08 21:50:19.018068 [Node 3] event=RECEIVE_REPLY from=2 lamport=290 local=291 replies=2/2
+2026/11/08 21:50:19.018068 [Node 3] event=ENTER_CS lamport=291
+2026/11/08 21:50:20.019051 [Node 3] event=EXIT_CS lamport=291 deferred=0
+2026/11/08 21:50:21.542646 [Node 3] event=RECEIVE_REQUEST from=1 lamport=289 local=292 state=RELEASED
+2026/11/08 21:50:21.542646 [Node 3] event=SEND_REPLY to=1 lamport=293
+2026/11/08 21:50:21.758495 [Node 3] event=REQUEST_CS lamport=294
+2026/11/08 21:50:21.758495 [Node 3] event=SEND_REQUEST to=1 lamport=294
+2026/11/08 21:50:21.758495 [Node 3] event=SEND_REQUEST to=2 lamport=294
+2026/11/08 21:50:21.759497 [Node 3] event=RECEIVE_REPLY from=2 lamport=296 local=297 replies=1/2
+2026/11/08 21:50:22.380813 [Node 3] event=RECEIVE_REQUEST from=2 lamport=297 local=298 state=WANTED
+2026/11/08 21:50:22.380813 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:50:22.543813 [Node 3] event=RECEIVE_REPLY from=1 lamport=300 local=301 replies=2/2
+2026/11/08 21:50:22.543813 [Node 3] event=ENTER_CS lamport=301
+2026/11/08 21:50:23.544858 [Node 3] event=EXIT_CS lamport=301 deferred=1
+2026/11/08 21:50:23.544858 [Node 3] event=SEND_REPLY to=2 lamport=302
+2026/11/08 21:50:23.561760 [Node 3] event=RECEIVE_REQUEST from=1 lamport=301 local=303 state=RELEASED
+2026/11/08 21:50:23.561760 [Node 3] event=SEND_REPLY to=1 lamport=304
+2026/11/08 21:50:26.408605 [Node 3] event=REQUEST_CS lamport=305
+2026/11/08 21:50:26.408605 [Node 3] event=SEND_REQUEST to=1 lamport=305
+2026/11/08 21:50:26.408605 [Node 3] event=SEND_REQUEST to=2 lamport=305
+2026/11/08 21:50:26.408605 [Node 3] event=RECEIVE_REPLY from=2 lamport=307 local=308 replies=1/2
+2026/11/08 21:50:26.408605 [Node 3] event=RECEIVE_REPLY from=1 lamport=308 local=309 replies=2/2
+2026/11/08 21:50:26.408605 [Node 3] event=ENTER_CS lamport=309
+2026/11/08 21:50:26.701148 [Node 3] event=RECEIVE_REQUEST from=2 lamport=308 local=310 state=HELD
+2026/11/08 21:50:26.701148 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:50:27.409709 [Node 3] event=EXIT_CS lamport=310 deferred=1
+2026/11/08 21:50:27.409709 [Node 3] event=SEND_REPLY to=2 lamport=311
+2026/11/08 21:50:28.363709 [Node 3] event=RECEIVE_REQUEST from=1 lamport=311 local=312 state=RELEASED
+2026/11/08 21:50:28.363709 [Node 3] event=SEND_REPLY to=1 lamport=313
+2026/11/08 21:50:28.448709 [Node 3] event=REQUEST_CS lamport=314
+2026/11/08 21:50:28.448709 [Node 3] event=SEND_REQUEST to=1 lamport=314
+2026/11/08 21:50:28.448709 [Node 3] event=SEND_REQUEST to=2 lamport=314
+2026/11/08 21:50:28.448709 [Node 3] event=RECEIVE_REPLY from=2 lamport=316 local=317 replies=1/2
+2026/11/08 21:50:29.411345 [Node 3] event=RECEIVE_REPLY from=1 lamport=317 local=318 replies=2/2
+2026/11/08 21:50:29.411345 [Node 3] event=ENTER_CS lamport=318
+2026/11/08 21:50:29.934347 [Node 3] event=RECEIVE_REQUEST from=2 lamport=317 local=319 state=HELD
+2026/11/08 21:50:29.934347 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:50:30.411490 [Node 3] event=EXIT_CS lamport=319 deferred=1
+2026/11/08 21:50:30.411525 [Node 3] event=SEND_REPLY to=2 lamport=320
+2026/11/08 21:50:30.714556 [Node 3] event=RECEIVE_REQUEST from=1 lamport=320 local=321 state=RELEASED
+2026/11/08 21:50:30.714556 [Node 3] event=SEND_REPLY to=1 lamport=322
+2026/11/08 21:50:32.501116 [Node 3] event=RECEIVE_REQUEST from=2 lamport=324 local=325 state=RELEASED
+2026/11/08 21:50:32.501116 [Node 3] event=SEND_REPLY to=2 lamport=326
+2026/11/08 21:50:32.508253 [Node 3] event=REQUEST_CS lamport=327
+2026/11/08 21:50:32.508253 [Node 3] event=SEND_REQUEST to=1 lamport=327
+2026/11/08 21:50:32.508253 [Node 3] event=SEND_REQUEST to=2 lamport=327
+2026/11/08 21:50:32.508813 [Node 3] event=RECEIVE_REPLY from=1 lamport=329 local=330 replies=1/2
+2026/11/08 21:50:33.502464 [Node 3] event=RECEIVE_REPLY from=2 lamport=330 local=331 replies=2/2
+2026/11/08 21:50:33.502464 [Node 3] event=ENTER_CS lamport=331
+2026/11/08 21:50:34.502864 [Node 3] event=EXIT_CS lamport=331 deferred=0
+2026/11/08 21:50:34.506439 [Node 3] event=RECEIVE_REQUEST from=1 lamport=330 local=332 state=RELEASED
+2026/11/08 21:50:34.506439 [Node 3] event=SEND_REPLY to=1 lamport=333
+2026/11/08 21:50:35.699017 [Node 3] event=REQUEST_CS lamport=334
+2026/11/08 21:50:35.699017 [Node 3] event=SEND_REQUEST to=1 lamport=334
+2026/11/08 21:50:35.699017 [Node 3] event=SEND_REQUEST to=2 lamport=334
+2026/11/08 21:50:35.699662 [Node 3] event=RECEIVE_REPLY from=2 lamport=336 local=337 replies=1/2
+2026/11/08 21:50:35.699662 [Node 3] event=RECEIVE_REPLY from=1 lamport=336 local=338 replies=2/2
+2026/11/08 21:50:35.699662 [Node 3] event=ENTER_CS lamport=338
+2026/11/08 21:50:36.498921 [Node 3] event=RECEIVE_REQUEST from=2 lamport=337 local=339 state=HELD
+2026/11/08 21:50:36.499426 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:50:36.699697 [Node 3] event=EXIT_CS lamport=339 deferred=1
+2026/11/08 21:50:36.699697 [Node 3] event=SEND_REPLY to=2 lamport=340
+2026/11/08 21:50:36.931396 [Node 3] event=RECEIVE_REQUEST from=1 lamport=340 local=341 state=RELEASED
+2026/11/08 21:50:36.931396 [Node 3] event=SEND_REPLY to=1 lamport=342
+2026/11/08 21:50:39.572932 [Node 3] event=REQUEST_CS lamport=343
+2026/11/08 21:50:39.572932 [Node 3] event=SEND_REQUEST to=2 lamport=343
+2026/11/08 21:50:39.572932 [Node 3] event=SEND_REQUEST to=1 lamport=343
+2026/11/08 21:50:39.573491 [Node 3] event=RECEIVE_REPLY from=2 lamport=345 local=346 replies=1/2
+2026/11/08 21:50:39.573491 [Node 3] event=RECEIVE_REPLY from=1 lamport=346 local=347 replies=2/2
+2026/11/08 21:50:39.573491 [Node 3] event=ENTER_CS lamport=347
+2026/11/08 21:50:39.882745 [Node 3] event=RECEIVE_REQUEST from=2 lamport=346 local=348 state=HELD
+2026/11/08 21:50:39.882745 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:50:40.574058 [Node 3] event=EXIT_CS lamport=348 deferred=1
+2026/11/08 21:50:40.574058 [Node 3] event=SEND_REPLY to=2 lamport=349
+2026/11/08 21:50:41.881401 [Node 3] event=RECEIVE_REQUEST from=1 lamport=349 local=350 state=RELEASED
+2026/11/08 21:50:41.881401 [Node 3] event=SEND_REPLY to=1 lamport=351
+2026/11/08 21:50:43.829352 [Node 3] event=REQUEST_CS lamport=352
+2026/11/08 21:50:43.829352 [Node 3] event=SEND_REQUEST to=1 lamport=352
+2026/11/08 21:50:43.829352 [Node 3] event=SEND_REQUEST to=2 lamport=352
+2026/11/08 21:50:43.829960 [Node 3] event=RECEIVE_REPLY from=2 lamport=354 local=355 replies=1/2
+2026/11/08 21:50:43.829960 [Node 3] event=RECEIVE_REPLY from=1 lamport=356 local=357 replies=2/2
+2026/11/08 21:50:43.829960 [Node 3] event=ENTER_CS lamport=357
+2026/11/08 21:50:44.588719 [Node 3] event=RECEIVE_REQUEST from=2 lamport=355 local=358 state=HELD
+2026/11/08 21:50:44.588719 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:50:44.830412 [Node 3] event=EXIT_CS lamport=358 deferred=1
+2026/11/08 21:50:44.830412 [Node 3] event=SEND_REPLY to=2 lamport=359
+2026/11/08 21:50:45.122762 [Node 3] event=RECEIVE_REQUEST from=1 lamport=359 local=360 state=RELEASED
+2026/11/08 21:50:45.122762 [Node 3] event=SEND_REPLY to=1 lamport=361
+2026/11/08 21:50:47.287417 [Node 3] event=REQUEST_CS lamport=362
+2026/11/08 21:50:47.287417 [Node 3] event=SEND_REQUEST to=1 lamport=362
+2026/11/08 21:50:47.287417 [Node 3] event=SEND_REQUEST to=2 lamport=362
+2026/11/08 21:50:47.287988 [Node 3] event=RECEIVE_REPLY from=2 lamport=364 local=365 replies=1/2
+2026/11/08 21:50:47.287988 [Node 3] event=RECEIVE_REPLY from=1 lamport=365 local=366 replies=2/2
+2026/11/08 21:50:47.287988 [Node 3] event=ENTER_CS lamport=366
+2026/11/08 21:50:48.178033 [Node 3] event=RECEIVE_REQUEST from=2 lamport=365 local=367 state=HELD
+2026/11/08 21:50:48.178033 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:50:48.288714 [Node 3] event=EXIT_CS lamport=367 deferred=1
+2026/11/08 21:50:48.288714 [Node 3] event=SEND_REPLY to=2 lamport=368
+2026/11/08 21:50:49.050316 [Node 3] event=RECEIVE_REQUEST from=1 lamport=368 local=369 state=RELEASED
+2026/11/08 21:50:49.050316 [Node 3] event=SEND_REPLY to=1 lamport=370
+2026/11/08 21:50:49.849200 [Node 3] event=REQUEST_CS lamport=371
+2026/11/08 21:50:49.849200 [Node 3] event=SEND_REQUEST to=1 lamport=371
+2026/11/08 21:50:49.849200 [Node 3] event=SEND_REQUEST to=2 lamport=371
+2026/11/08 21:50:49.849200 [Node 3] event=RECEIVE_REPLY from=2 lamport=373 local=374 replies=1/2
+2026/11/08 21:50:50.289501 [Node 3] event=RECEIVE_REPLY from=1 lamport=374 local=375 replies=2/2
+2026/11/08 21:50:50.289501 [Node 3] event=ENTER_CS lamport=375
+2026/11/08 21:50:50.317103 [Node 3] event=RECEIVE_REQUEST from=2 lamport=374 local=376 state=HELD
+2026/11/08 21:50:50.317103 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:50:51.289863 [Node 3] event=EXIT_CS lamport=376 deferred=1
+2026/11/08 21:50:51.289927 [Node 3] event=SEND_REPLY to=2 lamport=377
+2026/11/08 21:50:52.644315 [Node 3] event=RECEIVE_REQUEST from=1 lamport=377 local=378 state=RELEASED
+2026/11/08 21:50:52.644315 [Node 3] event=SEND_REPLY to=1 lamport=379
+2026/11/08 21:50:53.374818 [Node 3] event=REQUEST_CS lamport=380
+2026/11/08 21:50:53.374818 [Node 3] event=SEND_REQUEST to=2 lamport=380
+2026/11/08 21:50:53.374818 [Node 3] event=SEND_REQUEST to=1 lamport=380
+2026/11/08 21:50:53.375731 [Node 3] event=RECEIVE_REPLY from=2 lamport=382 local=383 replies=1/2
+2026/11/08 21:50:53.622034 [Node 3] event=RECEIVE_REQUEST from=2 lamport=383 local=384 state=WANTED
+2026/11/08 21:50:53.622034 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:50:53.645544 [Node 3] event=RECEIVE_REPLY from=1 lamport=386 local=387 replies=2/2
+2026/11/08 21:50:53.645544 [Node 3] event=ENTER_CS lamport=387
+2026/11/08 21:50:54.646334 [Node 3] event=EXIT_CS lamport=387 deferred=1
+2026/11/08 21:50:54.646403 [Node 3] event=SEND_REPLY to=2 lamport=388
+2026/11/08 21:50:55.950152 [Node 3] event=REQUEST_CS lamport=389
+2026/11/08 21:50:55.950152 [Node 3] event=SEND_REQUEST to=1 lamport=389
+2026/11/08 21:50:55.950152 [Node 3] event=SEND_REQUEST to=2 lamport=389
+2026/11/08 21:50:55.950730 [Node 3] event=RECEIVE_REPLY from=2 lamport=391 local=392 replies=1/2
+2026/11/08 21:50:55.950730 [Node 3] event=RECEIVE_REPLY from=1 lamport=391 local=393 replies=2/2
+2026/11/08 21:50:55.950730 [Node 3] event=ENTER_CS lamport=393
+2026/11/08 21:50:56.951804 [Node 3] event=EXIT_CS lamport=393 deferred=0
+2026/11/08 21:50:57.272979 [Node 3] event=RECEIVE_REQUEST from=2 lamport=392 local=394 state=RELEASED
+2026/11/08 21:50:57.272979 [Node 3] event=SEND_REPLY to=2 lamport=395
+2026/11/08 21:50:57.501653 [Node 3] event=RECEIVE_REQUEST from=1 lamport=395 local=396 state=RELEASED
+2026/11/08 21:50:57.501653 [Node 3] event=SEND_REPLY to=1 lamport=397
+2026/11/08 21:50:58.818627 [Node 3] event=REQUEST_CS lamport=398
+2026/11/08 21:50:58.818627 [Node 3] event=SEND_REQUEST to=1 lamport=398
+2026/11/08 21:50:58.818627 [Node 3] event=SEND_REQUEST to=2 lamport=398
+2026/11/08 21:50:58.819631 [Node 3] event=RECEIVE_REPLY from=2 lamport=400 local=401 replies=1/2
+2026/11/08 21:50:59.276286 [Node 3] event=RECEIVE_REPLY from=1 lamport=401 local=402 replies=2/2
+2026/11/08 21:50:59.276286 [Node 3] event=ENTER_CS lamport=402
+2026/11/08 21:50:59.567455 [Node 3] event=RECEIVE_REQUEST from=2 lamport=401 local=403 state=HELD
+2026/11/08 21:50:59.568023 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:51:00.276933 [Node 3] event=EXIT_CS lamport=403 deferred=1
+2026/11/08 21:51:00.276933 [Node 3] event=SEND_REPLY to=2 lamport=404
+2026/11/08 21:51:01.673731 [Node 3] event=REQUEST_CS lamport=405
+2026/11/08 21:51:01.673731 [Node 3] event=SEND_REQUEST to=1 lamport=405
+2026/11/08 21:51:01.673731 [Node 3] event=SEND_REQUEST to=2 lamport=405
+2026/11/08 21:51:01.674312 [Node 3] event=RECEIVE_REPLY from=2 lamport=407 local=408 replies=1/2
+2026/11/08 21:51:01.674858 [Node 3] event=RECEIVE_REPLY from=1 lamport=407 local=409 replies=2/2
+2026/11/08 21:51:01.674858 [Node 3] event=ENTER_CS lamport=409
+2026/11/08 21:51:02.600009 [Node 3] event=RECEIVE_REQUEST from=1 lamport=408 local=410 state=HELD
+2026/11/08 21:51:02.600009 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:51:02.675822 [Node 3] event=EXIT_CS lamport=410 deferred=1
+2026/11/08 21:51:02.675822 [Node 3] event=SEND_REPLY to=1 lamport=411
+2026/11/08 21:51:04.803489 [Node 3] event=REQUEST_CS lamport=412
+2026/11/08 21:51:04.803489 [Node 3] event=SEND_REQUEST to=1 lamport=412
+2026/11/08 21:51:04.803489 [Node 3] event=SEND_REQUEST to=2 lamport=412
+2026/11/08 21:51:04.803489 [Node 3] event=RECEIVE_REPLY from=2 lamport=414 local=415 replies=1/2
+2026/11/08 21:51:04.804406 [Node 3] event=RECEIVE_REPLY from=1 lamport=414 local=416 replies=2/2
+2026/11/08 21:51:04.804406 [Node 3] event=ENTER_CS lamport=416
+2026/11/08 21:51:05.067411 [Node 3] event=RECEIVE_REQUEST from=2 lamport=415 local=417 state=HELD
+2026/11/08 21:51:05.067411 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:51:05.805104 [Node 3] event=EXIT_CS lamport=417 deferred=1
+2026/11/08 21:51:05.805104 [Node 3] event=SEND_REPLY to=2 lamport=418
+2026/11/08 21:51:07.492757 [Node 3] event=RECEIVE_REQUEST from=1 lamport=418 local=419 state=RELEASED
+2026/11/08 21:51:07.492757 [Node 3] event=SEND_REPLY to=1 lamport=420
+2026/11/08 21:51:08.831113 [Node 3] event=REQUEST_CS lamport=421
+2026/11/08 21:51:08.831113 [Node 3] event=SEND_REQUEST to=1 lamport=421
+2026/11/08 21:51:08.831113 [Node 3] event=SEND_REQUEST to=2 lamport=421
+2026/11/08 21:51:08.831672 [Node 3] event=RECEIVE_REPLY from=2 lamport=423 local=424 replies=1/2
+2026/11/08 21:51:08.831672 [Node 3] event=RECEIVE_REPLY from=1 lamport=425 local=426 replies=2/2
+2026/11/08 21:51:08.832205 [Node 3] event=ENTER_CS lamport=426
+2026/11/08 21:51:09.832838 [Node 3] event=EXIT_CS lamport=426 deferred=0
+2026/11/08 21:51:09.862988 [Node 3] event=RECEIVE_REQUEST from=2 lamport=424 local=427 state=RELEASED
+2026/11/08 21:51:09.863016 [Node 3] event=SEND_REPLY to=2 lamport=428
+2026/11/08 21:51:12.243857 [Node 3] event=RECEIVE_REQUEST from=1 lamport=428 local=429 state=RELEASED
+2026/11/08 21:51:12.243877 [Node 3] event=SEND_REPLY to=1 lamport=430
+2026/11/08 21:51:12.797544 [Node 3] event=REQUEST_CS lamport=431
+2026/11/08 21:51:12.797544 [Node 3] event=SEND_REQUEST to=1 lamport=431
+2026/11/08 21:51:12.797544 [Node 3] event=SEND_REQUEST to=2 lamport=431
+2026/11/08 21:51:12.798135 [Node 3] event=RECEIVE_REPLY from=2 lamport=434 local=435 replies=1/2
+2026/11/08 21:51:13.106345 [Node 3] event=RECEIVE_REQUEST from=2 lamport=435 local=436 state=WANTED
+2026/11/08 21:51:13.106913 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:51:13.244530 [Node 3] event=RECEIVE_REPLY from=1 lamport=438 local=439 replies=2/2
+2026/11/08 21:51:13.244530 [Node 3] event=ENTER_CS lamport=439
+2026/11/08 21:51:14.244921 [Node 3] event=EXIT_CS lamport=439 deferred=1
+2026/11/08 21:51:14.244921 [Node 3] event=SEND_REPLY to=2 lamport=440
+2026/11/08 21:51:15.760122 [Node 3] event=RECEIVE_REQUEST from=1 lamport=439 local=441 state=RELEASED
+2026/11/08 21:51:15.760727 [Node 3] event=SEND_REPLY to=1 lamport=442
+2026/11/08 21:51:17.267352 [Node 3] event=RECEIVE_REQUEST from=2 lamport=444 local=445 state=RELEASED
+2026/11/08 21:51:17.267352 [Node 3] event=SEND_REPLY to=2 lamport=446
+2026/11/08 21:51:17.930584 [Node 3] event=REQUEST_CS lamport=447
+2026/11/08 21:51:17.930584 [Node 3] event=SEND_REQUEST to=1 lamport=447
+2026/11/08 21:51:17.930584 [Node 3] event=SEND_REQUEST to=2 lamport=447
+2026/11/08 21:51:17.931175 [Node 3] event=RECEIVE_REPLY from=1 lamport=449 local=450 replies=1/2
+2026/11/08 21:51:18.268516 [Node 3] event=RECEIVE_REPLY from=2 lamport=450 local=451 replies=2/2
+2026/11/08 21:51:18.268516 [Node 3] event=ENTER_CS lamport=451
+2026/11/08 21:51:18.685583 [Node 3] event=RECEIVE_REQUEST from=1 lamport=450 local=452 state=HELD
+2026/11/08 21:51:18.685583 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:51:19.269385 [Node 3] event=EXIT_CS lamport=452 deferred=1
+2026/11/08 21:51:19.269432 [Node 3] event=SEND_REPLY to=1 lamport=453
+2026/11/08 21:51:19.718281 [Node 3] event=RECEIVE_REQUEST from=2 lamport=453 local=454 state=RELEASED
+2026/11/08 21:51:19.718281 [Node 3] event=SEND_REPLY to=2 lamport=455
+2026/11/08 21:51:20.709172 [Node 3] event=REQUEST_CS lamport=456
+2026/11/08 21:51:20.709220 [Node 3] event=SEND_REQUEST to=1 lamport=456
+2026/11/08 21:51:20.709220 [Node 3] event=SEND_REQUEST to=2 lamport=456
+2026/11/08 21:51:20.709748 [Node 3] event=RECEIVE_REPLY from=1 lamport=458 local=459 replies=1/2
+2026/11/08 21:51:21.271816 [Node 3] event=RECEIVE_REPLY from=2 lamport=459 local=460 replies=2/2
+2026/11/08 21:51:21.271816 [Node 3] event=ENTER_CS lamport=460
+2026/11/08 21:51:22.272338 [Node 3] event=EXIT_CS lamport=460 deferred=0
+2026/11/08 21:51:22.844979 [Node 3] event=RECEIVE_REQUEST from=2 lamport=460 local=461 state=RELEASED
+2026/11/08 21:51:22.844979 [Node 3] event=SEND_REPLY to=2 lamport=462
+2026/11/08 21:51:23.731975 [Node 3] event=RECEIVE_REQUEST from=1 lamport=463 local=464 state=RELEASED
+2026/11/08 21:51:23.732533 [Node 3] event=SEND_REPLY to=1 lamport=465
+2026/11/08 21:51:25.015732 [Node 3] event=REQUEST_CS lamport=466
+2026/11/08 21:51:25.015785 [Node 3] event=SEND_REQUEST to=1 lamport=466
+2026/11/08 21:51:25.015785 [Node 3] event=SEND_REQUEST to=2 lamport=466
+2026/11/08 21:51:25.016300 [Node 3] event=RECEIVE_REPLY from=2 lamport=468 local=469 replies=1/2
+2026/11/08 21:51:25.016300 [Node 3] event=RECEIVE_REPLY from=1 lamport=469 local=470 replies=2/2
+2026/11/08 21:51:25.016832 [Node 3] event=ENTER_CS lamport=470
+2026/11/08 21:51:26.017783 [Node 3] event=EXIT_CS lamport=470 deferred=0
+2026/11/08 21:51:27.571080 [Node 3] event=RECEIVE_REQUEST from=2 lamport=469 local=471 state=RELEASED
+2026/11/08 21:51:27.571080 [Node 3] event=SEND_REPLY to=2 lamport=472
+2026/11/08 21:51:28.133799 [Node 3] event=RECEIVE_REQUEST from=1 lamport=472 local=473 state=RELEASED
+2026/11/08 21:51:28.133799 [Node 3] event=SEND_REPLY to=1 lamport=474
+2026/11/08 21:51:28.233981 [Node 3] event=REQUEST_CS lamport=475
+2026/11/08 21:51:28.233981 [Node 3] event=SEND_REQUEST to=1 lamport=475
+2026/11/08 21:51:28.233981 [Node 3] event=SEND_REQUEST to=2 lamport=475
+2026/11/08 21:51:28.572385 [Node 3] event=RECEIVE_REPLY from=2 lamport=477 local=478 replies=1/2
+2026/11/08 21:51:29.573913 [Node 3] event=RECEIVE_REPLY from=1 lamport=480 local=481 replies=2/2
+2026/11/08 21:51:29.573913 [Node 3] event=ENTER_CS lamport=481
+2026/11/08 21:51:30.574392 [Node 3] event=EXIT_CS lamport=481 deferred=0
+2026/11/08 21:51:32.454762 [Node 3] event=RECEIVE_REQUEST from=2 lamport=479 local=482 state=RELEASED
+2026/11/08 21:51:32.454762 [Node 3] event=SEND_REPLY to=2 lamport=483
+2026/11/08 21:51:32.485501 [Node 3] event=REQUEST_CS lamport=484
+2026/11/08 21:51:32.485501 [Node 3] event=SEND_REQUEST to=2 lamport=484
+2026/11/08 21:51:32.485501 [Node 3] event=SEND_REQUEST to=1 lamport=484
+2026/11/08 21:51:32.486072 [Node 3] event=RECEIVE_REPLY from=1 lamport=486 local=487 replies=1/2
+2026/11/08 21:51:32.567111 [Node 3] event=RECEIVE_REQUEST from=1 lamport=487 local=488 state=WANTED
+2026/11/08 21:51:32.567111 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:51:33.456325 [Node 3] event=RECEIVE_REPLY from=2 lamport=490 local=491 replies=2/2
+2026/11/08 21:51:33.456325 [Node 3] event=ENTER_CS lamport=491
+2026/11/08 21:51:34.457351 [Node 3] event=EXIT_CS lamport=491 deferred=1
+2026/11/08 21:51:34.457351 [Node 3] event=SEND_REPLY to=1 lamport=492
+2026/11/08 21:51:34.644542 [Node 3] event=RECEIVE_REQUEST from=2 lamport=491 local=493 state=RELEASED
+2026/11/08 21:51:34.644542 [Node 3] event=SEND_REPLY to=2 lamport=494
+2026/11/08 21:51:36.411282 [Node 3] event=REQUEST_CS lamport=495
+2026/11/08 21:51:36.411282 [Node 3] event=SEND_REQUEST to=1 lamport=495
+2026/11/08 21:51:36.411282 [Node 3] event=SEND_REQUEST to=2 lamport=495
+2026/11/08 21:51:36.411855 [Node 3] event=RECEIVE_REPLY from=1 lamport=497 local=498 replies=1/2
+2026/11/08 21:51:36.459160 [Node 3] event=RECEIVE_REPLY from=2 lamport=498 local=499 replies=2/2
+2026/11/08 21:51:36.459690 [Node 3] event=ENTER_CS lamport=499
+2026/11/08 21:51:36.864310 [Node 3] event=RECEIVE_REQUEST from=1 lamport=498 local=500 state=HELD
+2026/11/08 21:51:36.864310 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:51:37.460180 [Node 3] event=EXIT_CS lamport=500 deferred=1
+2026/11/08 21:51:37.460228 [Node 3] event=SEND_REPLY to=1 lamport=501
+2026/11/08 21:51:39.849876 [Node 3] event=RECEIVE_REQUEST from=2 lamport=501 local=502 state=RELEASED
+2026/11/08 21:51:39.849876 [Node 3] event=SEND_REPLY to=2 lamport=503
+2026/11/08 21:51:40.152163 [Node 3] event=RECEIVE_REQUEST from=1 lamport=505 local=506 state=RELEASED
+2026/11/08 21:51:40.152163 [Node 3] event=SEND_REPLY to=1 lamport=507
+2026/11/08 21:51:41.034166 [Node 3] event=REQUEST_CS lamport=508
+2026/11/08 21:51:41.034166 [Node 3] event=SEND_REQUEST to=1 lamport=508
+2026/11/08 21:51:41.034166 [Node 3] event=SEND_REQUEST to=2 lamport=508
+2026/11/08 21:51:41.034925 [Node 3] event=RECEIVE_REPLY from=2 lamport=510 local=511 replies=1/2
+2026/11/08 21:51:41.853036 [Node 3] event=RECEIVE_REPLY from=1 lamport=511 local=512 replies=2/2
+2026/11/08 21:51:41.853619 [Node 3] event=ENTER_CS lamport=512
+2026/11/08 21:51:42.854044 [Node 3] event=EXIT_CS lamport=512 deferred=0
+2026/11/08 21:51:43.045604 [Node 3] event=RECEIVE_REQUEST from=1 lamport=512 local=513 state=RELEASED
+2026/11/08 21:51:43.045604 [Node 3] event=SEND_REPLY to=1 lamport=514
+2026/11/08 21:51:43.783829 [Node 3] event=RECEIVE_REQUEST from=2 lamport=515 local=516 state=RELEASED
+2026/11/08 21:51:43.783829 [Node 3] event=SEND_REPLY to=2 lamport=517
+2026/11/08 21:51:46.320235 [Node 3] event=RECEIVE_REQUEST from=1 lamport=519 local=520 state=RELEASED
+2026/11/08 21:51:46.320235 [Node 3] event=SEND_REPLY to=1 lamport=521
+2026/11/08 21:51:46.596278 [Node 3] event=REQUEST_CS lamport=522
+2026/11/08 21:51:46.596278 [Node 3] event=SEND_REQUEST to=1 lamport=522
+2026/11/08 21:51:46.596278 [Node 3] event=SEND_REQUEST to=2 lamport=522
+2026/11/08 21:51:46.596865 [Node 3] event=RECEIVE_REPLY from=2 lamport=524 local=525 replies=1/2
+2026/11/08 21:51:47.320465 [Node 3] event=RECEIVE_REPLY from=1 lamport=525 local=526 replies=2/2
+2026/11/08 21:51:47.320465 [Node 3] event=ENTER_CS lamport=526
+2026/11/08 21:51:47.594630 [Node 3] event=RECEIVE_REQUEST from=2 lamport=525 local=527 state=HELD
+2026/11/08 21:51:47.594630 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:51:48.321298 [Node 3] event=EXIT_CS lamport=527 deferred=1
+2026/11/08 21:51:48.321298 [Node 3] event=SEND_REPLY to=2 lamport=528
+2026/11/08 21:51:50.668727 [Node 3] event=RECEIVE_REQUEST from=1 lamport=528 local=529 state=RELEASED
+2026/11/08 21:51:50.668727 [Node 3] event=SEND_REPLY to=1 lamport=530
+2026/11/08 21:51:51.743573 [Node 3] event=REQUEST_CS lamport=531
+2026/11/08 21:51:51.743636 [Node 3] event=SEND_REQUEST to=1 lamport=531
+2026/11/08 21:51:51.743636 [Node 3] event=SEND_REQUEST to=2 lamport=531
+2026/11/08 21:51:51.744163 [Node 3] event=RECEIVE_REPLY from=1 lamport=535 local=536 replies=1/2
+2026/11/08 21:51:51.744163 [Node 3] event=RECEIVE_REPLY from=2 lamport=533 local=537 replies=2/2
+2026/11/08 21:51:51.744163 [Node 3] event=ENTER_CS lamport=537
+2026/11/08 21:51:52.745039 [Node 3] event=EXIT_CS lamport=537 deferred=0
+2026/11/08 21:51:52.798728 [Node 3] event=RECEIVE_REQUEST from=2 lamport=534 local=538 state=RELEASED
+2026/11/08 21:51:52.799321 [Node 3] event=SEND_REPLY to=2 lamport=539
+2026/11/08 21:51:53.321526 [Node 3] event=RECEIVE_REQUEST from=1 lamport=538 local=540 state=RELEASED
+2026/11/08 21:51:53.321526 [Node 3] event=SEND_REPLY to=1 lamport=541
+2026/11/08 21:51:55.014655 [Node 3] event=REQUEST_CS lamport=542
+2026/11/08 21:51:55.014655 [Node 3] event=SEND_REQUEST to=2 lamport=542
+2026/11/08 21:51:55.014655 [Node 3] event=SEND_REQUEST to=1 lamport=542
+2026/11/08 21:51:55.015374 [Node 3] event=RECEIVE_REPLY from=1 lamport=545 local=546 replies=1/2
+2026/11/08 21:51:55.015900 [Node 3] event=RECEIVE_REPLY from=2 lamport=544 local=547 replies=2/2
+2026/11/08 21:51:55.015900 [Node 3] event=ENTER_CS lamport=547
+2026/11/08 21:51:55.663282 [Node 3] event=RECEIVE_REQUEST from=2 lamport=545 local=548 state=HELD
+2026/11/08 21:51:55.663282 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:51:56.016085 [Node 3] event=EXIT_CS lamport=548 deferred=1
+2026/11/08 21:51:56.016085 [Node 3] event=SEND_REPLY to=2 lamport=549
+2026/11/08 21:51:57.997063 [Node 3] event=RECEIVE_REQUEST from=1 lamport=548 local=550 state=RELEASED
+2026/11/08 21:51:57.997063 [Node 3] event=SEND_REPLY to=1 lamport=551
+2026/11/08 21:51:59.362568 [Node 3] event=RECEIVE_REQUEST from=2 lamport=553 local=554 state=RELEASED
+2026/11/08 21:51:59.362568 [Node 3] event=SEND_REPLY to=2 lamport=555
+2026/11/08 21:51:59.920763 [Node 3] event=REQUEST_CS lamport=556
+2026/11/08 21:51:59.920763 [Node 3] event=SEND_REQUEST to=1 lamport=556
+2026/11/08 21:51:59.920763 [Node 3] event=SEND_REQUEST to=2 lamport=556
+2026/11/08 21:51:59.921927 [Node 3] event=RECEIVE_REPLY from=1 lamport=558 local=559 replies=1/2
+2026/11/08 21:52:00.364440 [Node 3] event=RECEIVE_REPLY from=2 lamport=559 local=560 replies=2/2
+2026/11/08 21:52:00.364440 [Node 3] event=ENTER_CS lamport=560
+2026/11/08 21:52:00.527440 [Node 3] event=RECEIVE_REQUEST from=1 lamport=559 local=561 state=HELD
+2026/11/08 21:52:00.527440 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:52:01.365439 [Node 3] event=EXIT_CS lamport=561 deferred=1
+2026/11/08 21:52:01.365439 [Node 3] event=SEND_REPLY to=1 lamport=562
+2026/11/08 21:52:03.382988 [Node 3] event=REQUEST_CS lamport=563
+2026/11/08 21:52:03.382988 [Node 3] event=SEND_REQUEST to=1 lamport=563
+2026/11/08 21:52:03.382988 [Node 3] event=SEND_REQUEST to=2 lamport=563
+2026/11/08 21:52:03.383989 [Node 3] event=RECEIVE_REPLY from=2 lamport=565 local=566 replies=1/2
+2026/11/08 21:52:03.383989 [Node 3] event=RECEIVE_REPLY from=1 lamport=565 local=567 replies=2/2
+2026/11/08 21:52:03.383989 [Node 3] event=ENTER_CS lamport=567
+2026/11/08 21:52:03.769988 [Node 3] event=RECEIVE_REQUEST from=2 lamport=566 local=568 state=HELD
+2026/11/08 21:52:03.769988 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:52:04.384989 [Node 3] event=EXIT_CS lamport=568 deferred=1
+2026/11/08 21:52:04.384989 [Node 3] event=SEND_REPLY to=2 lamport=569
+2026/11/08 21:52:05.629229 [Node 3] event=RECEIVE_REQUEST from=1 lamport=569 local=570 state=RELEASED
+2026/11/08 21:52:05.629229 [Node 3] event=SEND_REPLY to=1 lamport=571
+2026/11/08 21:52:07.949735 [Node 3] event=REQUEST_CS lamport=572
+2026/11/08 21:52:07.949735 [Node 3] event=SEND_REQUEST to=1 lamport=572
+2026/11/08 21:52:07.949735 [Node 3] event=SEND_REQUEST to=2 lamport=572
+2026/11/08 21:52:07.950738 [Node 3] event=RECEIVE_REPLY from=1 lamport=576 local=577 replies=1/2
+2026/11/08 21:52:07.950738 [Node 3] event=RECEIVE_REPLY from=2 lamport=574 local=578 replies=2/2
+2026/11/08 21:52:07.950738 [Node 3] event=ENTER_CS lamport=578
+2026/11/08 21:52:08.476735 [Node 3] event=RECEIVE_REQUEST from=2 lamport=575 local=579 state=HELD
+2026/11/08 21:52:08.476735 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:52:08.530735 [Node 3] event=RECEIVE_REQUEST from=1 lamport=579 local=580 state=HELD
+2026/11/08 21:52:08.530735 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:52:08.951735 [Node 3] event=EXIT_CS lamport=580 deferred=2
+2026/11/08 21:52:08.951735 [Node 3] event=SEND_REPLY to=1 lamport=581
+2026/11/08 21:52:08.951735 [Node 3] event=SEND_REPLY to=2 lamport=582
+2026/11/08 21:52:11.223268 [Node 3] event=RECEIVE_REQUEST from=2 lamport=585 local=586 state=RELEASED
+2026/11/08 21:52:11.223268 [Node 3] event=SEND_REPLY to=2 lamport=587
+2026/11/08 21:52:12.342578 [Node 3] event=RECEIVE_REQUEST from=1 lamport=588 local=589 state=RELEASED
+2026/11/08 21:52:12.342578 [Node 3] event=SEND_REPLY to=1 lamport=590
+2026/11/08 21:52:12.927316 [Node 3] event=REQUEST_CS lamport=591
+2026/11/08 21:52:12.927316 [Node 3] event=SEND_REQUEST to=1 lamport=591
+2026/11/08 21:52:12.927316 [Node 3] event=SEND_REQUEST to=2 lamport=591
+2026/11/08 21:52:12.928192 [Node 3] event=RECEIVE_REPLY from=2 lamport=593 local=594 replies=1/2
+2026/11/08 21:52:13.344254 [Node 3] event=RECEIVE_REPLY from=1 lamport=594 local=595 replies=2/2
+2026/11/08 21:52:13.344254 [Node 3] event=ENTER_CS lamport=595
+2026/11/08 21:52:14.344616 [Node 3] event=EXIT_CS lamport=595 deferred=0
+2026/11/08 21:52:15.474377 [Node 3] event=RECEIVE_REQUEST from=1 lamport=595 local=596 state=RELEASED
+2026/11/08 21:52:15.474377 [Node 3] event=SEND_REPLY to=1 lamport=597
+2026/11/08 21:52:15.783378 [Node 3] event=RECEIVE_REQUEST from=2 lamport=598 local=599 state=RELEASED
+2026/11/08 21:52:15.783378 [Node 3] event=SEND_REPLY to=2 lamport=600
+2026/11/08 21:52:16.241378 [Node 3] event=REQUEST_CS lamport=601
+2026/11/08 21:52:16.241378 [Node 3] event=SEND_REQUEST to=1 lamport=601
+2026/11/08 21:52:16.241378 [Node 3] event=SEND_REQUEST to=2 lamport=601
+2026/11/08 21:52:16.476377 [Node 3] event=RECEIVE_REPLY from=1 lamport=603 local=604 replies=1/2
+2026/11/08 21:52:17.477377 [Node 3] event=RECEIVE_REPLY from=2 lamport=606 local=607 replies=2/2
+2026/11/08 21:52:17.477377 [Node 3] event=ENTER_CS lamport=607
+2026/11/08 21:52:18.477911 [Node 3] event=EXIT_CS lamport=607 deferred=0
+2026/11/08 21:52:18.596911 [Node 3] event=RECEIVE_REQUEST from=1 lamport=605 local=608 state=RELEASED
+2026/11/08 21:52:18.596911 [Node 3] event=SEND_REPLY to=1 lamport=609
+2026/11/08 21:52:19.843921 [Node 3] event=RECEIVE_REQUEST from=2 lamport=609 local=610 state=RELEASED
+2026/11/08 21:52:19.843921 [Node 3] event=SEND_REPLY to=2 lamport=611
+2026/11/08 21:52:21.510580 [Node 3] event=REQUEST_CS lamport=612
+2026/11/08 21:52:21.510580 [Node 3] event=SEND_REQUEST to=1 lamport=612
+2026/11/08 21:52:21.510580 [Node 3] event=SEND_REQUEST to=2 lamport=612
+2026/11/08 21:52:21.511394 [Node 3] event=RECEIVE_REPLY from=1 lamport=615 local=616 replies=1/2
+2026/11/08 21:52:21.511394 [Node 3] event=RECEIVE_REPLY from=2 lamport=617 local=618 replies=2/2
+2026/11/08 21:52:21.511394 [Node 3] event=ENTER_CS lamport=618
+2026/11/08 21:52:22.226676 [Node 3] event=RECEIVE_REQUEST from=1 lamport=616 local=619 state=HELD
+2026/11/08 21:52:22.226676 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:52:22.511464 [Node 3] event=EXIT_CS lamport=619 deferred=1
+2026/11/08 21:52:22.511464 [Node 3] event=SEND_REPLY to=1 lamport=620
+2026/11/08 21:52:23.303831 [Node 3] event=RECEIVE_REQUEST from=2 lamport=620 local=621 state=RELEASED
+2026/11/08 21:52:23.303831 [Node 3] event=SEND_REPLY to=2 lamport=622
+2026/11/08 21:52:25.432832 [Node 3] event=RECEIVE_REQUEST from=1 lamport=624 local=625 state=RELEASED
+2026/11/08 21:52:25.432832 [Node 3] event=SEND_REPLY to=1 lamport=626
+2026/11/08 21:52:26.044832 [Node 3] event=REQUEST_CS lamport=627
+2026/11/08 21:52:26.044832 [Node 3] event=SEND_REQUEST to=1 lamport=627
+2026/11/08 21:52:26.044832 [Node 3] event=SEND_REQUEST to=2 lamport=627
+2026/11/08 21:52:26.044832 [Node 3] event=RECEIVE_REPLY from=2 lamport=629 local=630 replies=1/2
+2026/11/08 21:52:26.434831 [Node 3] event=RECEIVE_REPLY from=1 lamport=630 local=631 replies=2/2
+2026/11/08 21:52:26.434831 [Node 3] event=ENTER_CS lamport=631
+2026/11/08 21:52:27.435388 [Node 3] event=EXIT_CS lamport=631 deferred=0
+2026/11/08 21:52:28.171637 [Node 3] event=RECEIVE_REQUEST from=2 lamport=630 local=632 state=RELEASED
+2026/11/08 21:52:28.171637 [Node 3] event=SEND_REPLY to=2 lamport=633
+2026/11/08 21:52:30.430493 [Node 3] event=RECEIVE_REQUEST from=1 lamport=633 local=634 state=RELEASED
+2026/11/08 21:52:30.430493 [Node 3] event=SEND_REPLY to=1 lamport=635
+2026/11/08 21:52:30.678492 [Node 3] event=REQUEST_CS lamport=636
+2026/11/08 21:52:30.678492 [Node 3] event=SEND_REQUEST to=1 lamport=636
+2026/11/08 21:52:30.678492 [Node 3] event=SEND_REQUEST to=2 lamport=636
+2026/11/08 21:52:30.679496 [Node 3] event=RECEIVE_REPLY from=2 lamport=638 local=639 replies=1/2
+2026/11/08 21:52:31.432133 [Node 3] event=RECEIVE_REPLY from=1 lamport=639 local=640 replies=2/2
+2026/11/08 21:52:31.432133 [Node 3] event=ENTER_CS lamport=640
+2026/11/08 21:52:32.433695 [Node 3] event=EXIT_CS lamport=640 deferred=0
+2026/11/08 21:52:32.514293 [Node 3] event=RECEIVE_REQUEST from=2 lamport=639 local=641 state=RELEASED
+2026/11/08 21:52:32.514293 [Node 3] event=SEND_REPLY to=2 lamport=642
+2026/11/08 21:52:33.019374 [Node 3] event=RECEIVE_REQUEST from=1 lamport=642 local=643 state=RELEASED
+2026/11/08 21:52:33.019374 [Node 3] event=SEND_REPLY to=1 lamport=644
+2026/11/08 21:52:33.892506 [Node 3] event=REQUEST_CS lamport=645
+2026/11/08 21:52:33.892506 [Node 3] event=SEND_REQUEST to=1 lamport=645
+2026/11/08 21:52:33.892506 [Node 3] event=SEND_REQUEST to=2 lamport=645
+2026/11/08 21:52:33.893622 [Node 3] event=RECEIVE_REPLY from=2 lamport=648 local=649 replies=1/2
+2026/11/08 21:52:34.517144 [Node 3] event=RECEIVE_REPLY from=1 lamport=649 local=650 replies=2/2
+2026/11/08 21:52:34.517144 [Node 3] event=ENTER_CS lamport=650
+2026/11/08 21:52:35.518291 [Node 3] event=EXIT_CS lamport=650 deferred=0
+2026/11/08 21:52:35.552890 [Node 3] event=RECEIVE_REQUEST from=2 lamport=649 local=651 state=RELEASED
+2026/11/08 21:52:35.552890 [Node 3] event=SEND_REPLY to=2 lamport=652
+2026/11/08 21:52:36.323273 [Node 3] event=RECEIVE_REQUEST from=1 lamport=652 local=653 state=RELEASED
+2026/11/08 21:52:36.323292 [Node 3] event=SEND_REPLY to=1 lamport=654
+2026/11/08 21:52:38.828896 [Node 3] event=REQUEST_CS lamport=655
+2026/11/08 21:52:38.828896 [Node 3] event=SEND_REQUEST to=1 lamport=655
+2026/11/08 21:52:38.828896 [Node 3] event=SEND_REQUEST to=2 lamport=655
+2026/11/08 21:52:38.829692 [Node 3] event=RECEIVE_REPLY from=2 lamport=658 local=659 replies=1/2
+2026/11/08 21:52:38.829692 [Node 3] event=RECEIVE_REPLY from=1 lamport=659 local=660 replies=2/2
+2026/11/08 21:52:38.829692 [Node 3] event=ENTER_CS lamport=660
+2026/11/08 21:52:39.296317 [Node 3] event=RECEIVE_REQUEST from=1 lamport=660 local=661 state=HELD
+2026/11/08 21:52:39.296913 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:52:39.830238 [Node 3] event=EXIT_CS lamport=661 deferred=1
+2026/11/08 21:52:39.830238 [Node 3] event=SEND_REPLY to=1 lamport=662
+2026/11/08 21:52:40.133315 [Node 3] event=RECEIVE_REQUEST from=2 lamport=663 local=664 state=RELEASED
+2026/11/08 21:52:40.133315 [Node 3] event=SEND_REPLY to=2 lamport=665
+2026/11/08 21:52:43.336352 [Node 3] event=RECEIVE_REQUEST from=2 lamport=668 local=669 state=RELEASED
+2026/11/08 21:52:43.336859 [Node 3] event=SEND_REPLY to=2 lamport=670
+2026/11/08 21:52:43.813437 [Node 3] event=REQUEST_CS lamport=671
+2026/11/08 21:52:43.813437 [Node 3] event=SEND_REQUEST to=1 lamport=671
+2026/11/08 21:52:43.813437 [Node 3] event=SEND_REQUEST to=2 lamport=671
+2026/11/08 21:52:43.814065 [Node 3] event=RECEIVE_REPLY from=1 lamport=673 local=674 replies=1/2
+2026/11/08 21:52:43.825579 [Node 3] event=RECEIVE_REQUEST from=1 lamport=674 local=675 state=WANTED
+2026/11/08 21:52:43.825579 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:52:44.338659 [Node 3] event=RECEIVE_REPLY from=2 lamport=677 local=678 replies=2/2
+2026/11/08 21:52:44.338659 [Node 3] event=ENTER_CS lamport=678
+2026/11/08 21:52:45.339623 [Node 3] event=EXIT_CS lamport=678 deferred=1
+2026/11/08 21:52:45.339623 [Node 3] event=SEND_REPLY to=1 lamport=679
+2026/11/08 21:52:47.784360 [Node 3] event=RECEIVE_REQUEST from=2 lamport=678 local=680 state=RELEASED
+2026/11/08 21:52:47.784360 [Node 3] event=SEND_REPLY to=2 lamport=681
+2026/11/08 21:52:48.388782 [Node 3] event=RECEIVE_REQUEST from=1 lamport=683 local=684 state=RELEASED
+2026/11/08 21:52:48.389424 [Node 3] event=SEND_REPLY to=1 lamport=685
+2026/11/08 21:52:48.402490 [Node 3] event=REQUEST_CS lamport=686
+2026/11/08 21:52:48.402490 [Node 3] event=SEND_REQUEST to=1 lamport=686
+2026/11/08 21:52:48.402490 [Node 3] event=SEND_REQUEST to=2 lamport=686
+2026/11/08 21:52:48.785579 [Node 3] event=RECEIVE_REPLY from=2 lamport=688 local=689 replies=1/2
+2026/11/08 21:52:49.785985 [Node 3] event=RECEIVE_REPLY from=1 lamport=691 local=692 replies=2/2
+2026/11/08 21:52:49.785985 [Node 3] event=ENTER_CS lamport=692
+2026/11/08 21:52:50.786176 [Node 3] event=EXIT_CS lamport=692 deferred=0
+2026/11/08 21:52:51.133723 [Node 3] event=RECEIVE_REQUEST from=2 lamport=690 local=693 state=RELEASED
+2026/11/08 21:52:51.133723 [Node 3] event=SEND_REPLY to=2 lamport=694
+2026/11/08 21:52:52.198320 [Node 3] event=REQUEST_CS lamport=695
+2026/11/08 21:52:52.198385 [Node 3] event=SEND_REQUEST to=1 lamport=695
+2026/11/08 21:52:52.198385 [Node 3] event=SEND_REQUEST to=2 lamport=695
+2026/11/08 21:52:52.198917 [Node 3] event=RECEIVE_REPLY from=2 lamport=697 local=698 replies=1/2
+2026/11/08 21:52:52.198917 [Node 3] event=RECEIVE_REPLY from=1 lamport=697 local=699 replies=2/2
+2026/11/08 21:52:52.198917 [Node 3] event=ENTER_CS lamport=699
+2026/11/08 21:52:52.881008 [Node 3] event=RECEIVE_REQUEST from=1 lamport=698 local=700 state=HELD
+2026/11/08 21:52:52.881008 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:52:53.199962 [Node 3] event=EXIT_CS lamport=700 deferred=1
+2026/11/08 21:52:53.199962 [Node 3] event=SEND_REPLY to=1 lamport=701
+2026/11/08 21:52:55.466536 [Node 3] event=RECEIVE_REQUEST from=2 lamport=701 local=702 state=RELEASED
+2026/11/08 21:52:55.466536 [Node 3] event=SEND_REPLY to=2 lamport=703
+2026/11/08 21:52:56.993302 [Node 3] event=REQUEST_CS lamport=704
+2026/11/08 21:52:56.993302 [Node 3] event=SEND_REQUEST to=1 lamport=704
+2026/11/08 21:52:56.993302 [Node 3] event=SEND_REQUEST to=2 lamport=704
+2026/11/08 21:52:56.993909 [Node 3] event=RECEIVE_REPLY from=2 lamport=707 local=708 replies=1/2
+2026/11/08 21:52:56.993909 [Node 3] event=RECEIVE_REPLY from=1 lamport=706 local=709 replies=2/2
+2026/11/08 21:52:56.993909 [Node 3] event=ENTER_CS lamport=709
+2026/11/08 21:52:57.829182 [Node 3] event=RECEIVE_REQUEST from=1 lamport=707 local=710 state=HELD
+2026/11/08 21:52:57.829182 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:52:57.994282 [Node 3] event=EXIT_CS lamport=710 deferred=1
+2026/11/08 21:52:57.994282 [Node 3] event=SEND_REPLY to=1 lamport=711
+2026/11/08 21:53:00.099526 [Node 3] event=RECEIVE_REQUEST from=1 lamport=713 local=714 state=RELEASED
+2026/11/08 21:53:00.099526 [Node 3] event=SEND_REPLY to=1 lamport=715
+2026/11/08 21:53:00.170788 [Node 3] event=REQUEST_CS lamport=716
+2026/11/08 21:53:00.170818 [Node 3] event=SEND_REQUEST to=1 lamport=716
+2026/11/08 21:53:00.170818 [Node 3] event=SEND_REQUEST to=2 lamport=716
+2026/11/08 21:53:00.171375 [Node 3] event=RECEIVE_REPLY from=2 lamport=718 local=719 replies=1/2
+2026/11/08 21:53:00.358929 [Node 3] event=RECEIVE_REQUEST from=2 lamport=719 local=720 state=WANTED
+2026/11/08 21:53:00.358929 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:53:01.100212 [Node 3] event=RECEIVE_REPLY from=1 lamport=722 local=723 replies=2/2
+2026/11/08 21:53:01.100212 [Node 3] event=ENTER_CS lamport=723
+2026/11/08 21:53:02.101340 [Node 3] event=EXIT_CS lamport=723 deferred=1
+2026/11/08 21:53:02.101392 [Node 3] event=SEND_REPLY to=2 lamport=724
+2026/11/08 21:53:03.404129 [Node 3] event=RECEIVE_REQUEST from=1 lamport=723 local=725 state=RELEASED
+2026/11/08 21:53:03.404129 [Node 3] event=SEND_REPLY to=1 lamport=726
+2026/11/08 21:53:05.356477 [Node 3] event=REQUEST_CS lamport=727
+2026/11/08 21:53:05.356513 [Node 3] event=SEND_REQUEST to=1 lamport=727
+2026/11/08 21:53:05.356513 [Node 3] event=SEND_REQUEST to=2 lamport=727
+2026/11/08 21:53:05.357054 [Node 3] event=RECEIVE_REPLY from=2 lamport=729 local=730 replies=1/2
+2026/11/08 21:53:05.357054 [Node 3] event=RECEIVE_REPLY from=1 lamport=730 local=731 replies=2/2
+2026/11/08 21:53:05.357054 [Node 3] event=ENTER_CS lamport=731
+2026/11/08 21:53:05.943536 [Node 3] event=RECEIVE_REQUEST from=2 lamport=730 local=732 state=HELD
+2026/11/08 21:53:05.944099 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:53:06.357310 [Node 3] event=EXIT_CS lamport=732 deferred=1
+2026/11/08 21:53:06.357310 [Node 3] event=SEND_REPLY to=2 lamport=733
+2026/11/08 21:53:07.934340 [Node 3] event=RECEIVE_REQUEST from=1 lamport=733 local=734 state=RELEASED
+2026/11/08 21:53:07.934340 [Node 3] event=SEND_REPLY to=1 lamport=735
+2026/11/08 21:53:09.378293 [Node 3] event=REQUEST_CS lamport=736
+2026/11/08 21:53:09.378339 [Node 3] event=SEND_REQUEST to=1 lamport=736
+2026/11/08 21:53:09.378339 [Node 3] event=SEND_REQUEST to=2 lamport=736
+2026/11/08 21:53:09.378924 [Node 3] event=RECEIVE_REPLY from=1 lamport=739 local=740 replies=1/2
+2026/11/08 21:53:09.378924 [Node 3] event=RECEIVE_REPLY from=2 lamport=738 local=741 replies=2/2
+2026/11/08 21:53:09.378924 [Node 3] event=ENTER_CS lamport=741
+2026/11/08 21:53:09.676010 [Node 3] event=RECEIVE_REQUEST from=2 lamport=739 local=742 state=HELD
+2026/11/08 21:53:09.676010 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:53:10.379664 [Node 3] event=EXIT_CS lamport=742 deferred=1
+2026/11/08 21:53:10.379711 [Node 3] event=SEND_REPLY to=2 lamport=743
+2026/11/08 21:53:11.569590 [Node 3] event=REQUEST_CS lamport=744
+2026/11/08 21:53:11.569638 [Node 3] event=SEND_REQUEST to=1 lamport=744
+2026/11/08 21:53:11.569638 [Node 3] event=SEND_REQUEST to=2 lamport=744
+2026/11/08 21:53:11.570234 [Node 3] event=RECEIVE_REPLY from=2 lamport=746 local=747 replies=1/2
+2026/11/08 21:53:11.570234 [Node 3] event=RECEIVE_REPLY from=1 lamport=746 local=748 replies=2/2
+2026/11/08 21:53:11.570234 [Node 3] event=ENTER_CS lamport=748
+2026/11/08 21:53:12.308074 [Node 3] event=RECEIVE_REQUEST from=1 lamport=747 local=749 state=HELD
+2026/11/08 21:53:12.308074 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:53:12.571287 [Node 3] event=EXIT_CS lamport=749 deferred=1
+2026/11/08 21:53:12.571332 [Node 3] event=SEND_REPLY to=1 lamport=750
+2026/11/08 21:53:14.241356 [Node 3] event=REQUEST_CS lamport=751
+2026/11/08 21:53:14.241356 [Node 3] event=SEND_REQUEST to=1 lamport=751
+2026/11/08 21:53:14.241356 [Node 3] event=SEND_REQUEST to=2 lamport=751
+2026/11/08 21:53:14.241946 [Node 3] event=RECEIVE_REPLY from=1 lamport=753 local=754 replies=1/2
+2026/11/08 21:53:14.241946 [Node 3] event=RECEIVE_REPLY from=2 lamport=753 local=755 replies=2/2
+2026/11/08 21:53:14.241946 [Node 3] event=ENTER_CS lamport=755
+2026/11/08 21:53:14.648115 [Node 3] event=RECEIVE_REQUEST from=2 lamport=754 local=756 state=HELD
+2026/11/08 21:53:14.648115 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:53:15.242428 [Node 3] event=EXIT_CS lamport=756 deferred=1
+2026/11/08 21:53:15.242475 [Node 3] event=SEND_REPLY to=2 lamport=757
+2026/11/08 21:53:16.295397 [Node 3] event=RECEIVE_REQUEST from=1 lamport=757 local=758 state=RELEASED
+2026/11/08 21:53:16.295397 [Node 3] event=SEND_REPLY to=1 lamport=759
+2026/11/08 21:53:17.622912 [Node 3] event=RECEIVE_REQUEST from=2 lamport=761 local=762 state=RELEASED
+2026/11/08 21:53:17.622912 [Node 3] event=SEND_REPLY to=2 lamport=763
+2026/11/08 21:53:18.840093 [Node 3] event=RECEIVE_REQUEST from=1 lamport=764 local=765 state=RELEASED
+2026/11/08 21:53:18.840723 [Node 3] event=SEND_REPLY to=1 lamport=766
+2026/11/08 21:53:18.872771 [Node 3] event=REQUEST_CS lamport=767
+2026/11/08 21:53:18.872813 [Node 3] event=SEND_REQUEST to=1 lamport=767
+2026/11/08 21:53:18.872813 [Node 3] event=SEND_REQUEST to=2 lamport=767
+2026/11/08 21:53:18.873340 [Node 3] event=RECEIVE_REPLY from=2 lamport=769 local=770 replies=1/2
+2026/11/08 21:53:19.841708 [Node 3] event=RECEIVE_REPLY from=1 lamport=771 local=772 replies=2/2
+2026/11/08 21:53:19.841708 [Node 3] event=ENTER_CS lamport=772
+2026/11/08 21:53:20.842218 [Node 3] event=EXIT_CS lamport=772 deferred=0
+2026/11/08 21:53:21.981175 [Node 3] event=RECEIVE_REQUEST from=2 lamport=770 local=773 state=RELEASED
+2026/11/08 21:53:21.981175 [Node 3] event=SEND_REPLY to=2 lamport=774
+2026/11/08 21:53:23.042352 [Node 3] event=REQUEST_CS lamport=775
+2026/11/08 21:53:23.042352 [Node 3] event=SEND_REQUEST to=1 lamport=775
+2026/11/08 21:53:23.042352 [Node 3] event=SEND_REQUEST to=2 lamport=775
+2026/11/08 21:53:23.042927 [Node 3] event=RECEIVE_REPLY from=2 lamport=778 local=779 replies=1/2
+2026/11/08 21:53:23.042927 [Node 3] event=RECEIVE_REPLY from=1 lamport=777 local=780 replies=2/2
+2026/11/08 21:53:23.042927 [Node 3] event=ENTER_CS lamport=780
+2026/11/08 21:53:23.249318 [Node 3] event=RECEIVE_REQUEST from=1 lamport=778 local=781 state=HELD
+2026/11/08 21:53:23.249318 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:53:24.043619 [Node 3] event=EXIT_CS lamport=781 deferred=1
+2026/11/08 21:53:24.043619 [Node 3] event=SEND_REPLY to=1 lamport=782
+2026/11/08 21:53:26.216897 [Node 3] event=RECEIVE_REQUEST from=1 lamport=784 local=785 state=RELEASED
+2026/11/08 21:53:26.216897 [Node 3] event=SEND_REPLY to=1 lamport=786
+2026/11/08 21:53:26.397761 [Node 3] event=RECEIVE_REQUEST from=2 lamport=787 local=788 state=RELEASED
+2026/11/08 21:53:26.397761 [Node 3] event=SEND_REPLY to=2 lamport=789
+2026/11/08 21:53:26.778923 [Node 3] event=REQUEST_CS lamport=790
+2026/11/08 21:53:26.778923 [Node 3] event=SEND_REQUEST to=1 lamport=790
+2026/11/08 21:53:26.778923 [Node 3] event=SEND_REQUEST to=2 lamport=790
+2026/11/08 21:53:27.218626 [Node 3] event=RECEIVE_REPLY from=1 lamport=792 local=793 replies=1/2
+2026/11/08 21:53:28.219146 [Node 3] event=RECEIVE_REPLY from=2 lamport=795 local=796 replies=2/2
+2026/11/08 21:53:28.219684 [Node 3] event=ENTER_CS lamport=796
+2026/11/08 21:53:29.220719 [Node 3] event=EXIT_CS lamport=796 deferred=0
+2026/11/08 21:53:30.136332 [Node 3] event=RECEIVE_REQUEST from=1 lamport=794 local=797 state=RELEASED
+2026/11/08 21:53:30.136839 [Node 3] event=SEND_REPLY to=1 lamport=798
+2026/11/08 21:53:31.461728 [Node 3] event=REQUEST_CS lamport=799
+2026/11/08 21:53:31.461770 [Node 3] event=SEND_REQUEST to=2 lamport=799
+2026/11/08 21:53:31.461770 [Node 3] event=SEND_REQUEST to=1 lamport=799
+2026/11/08 21:53:31.462316 [Node 3] event=RECEIVE_REPLY from=2 lamport=801 local=802 replies=1/2
+2026/11/08 21:53:31.462316 [Node 3] event=RECEIVE_REPLY from=1 lamport=802 local=803 replies=2/2
+2026/11/08 21:53:31.462316 [Node 3] event=ENTER_CS lamport=803
+2026/11/08 21:53:31.714403 [Node 3] event=RECEIVE_REQUEST from=2 lamport=802 local=804 state=HELD
+2026/11/08 21:53:31.714403 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:53:32.462733 [Node 3] event=EXIT_CS lamport=804 deferred=1
+2026/11/08 21:53:32.462733 [Node 3] event=SEND_REPLY to=2 lamport=805
+2026/11/08 21:53:33.627070 [Node 3] event=REQUEST_CS lamport=806
+2026/11/08 21:53:33.627070 [Node 3] event=SEND_REQUEST to=1 lamport=806
+2026/11/08 21:53:33.627070 [Node 3] event=SEND_REQUEST to=2 lamport=806
+2026/11/08 21:53:33.627668 [Node 3] event=RECEIVE_REPLY from=2 lamport=808 local=809 replies=1/2
+2026/11/08 21:53:33.627668 [Node 3] event=RECEIVE_REPLY from=1 lamport=808 local=810 replies=2/2
+2026/11/08 21:53:33.627668 [Node 3] event=ENTER_CS lamport=810
+2026/11/08 21:53:34.468272 [Node 3] event=RECEIVE_REQUEST from=2 lamport=809 local=811 state=HELD
+2026/11/08 21:53:34.468272 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:53:34.627891 [Node 3] event=EXIT_CS lamport=811 deferred=1
+2026/11/08 21:53:34.627891 [Node 3] event=SEND_REPLY to=2 lamport=812
+2026/11/08 21:53:34.639947 [Node 3] event=RECEIVE_REQUEST from=1 lamport=812 local=813 state=RELEASED
+2026/11/08 21:53:34.639947 [Node 3] event=SEND_REPLY to=1 lamport=814
+2026/11/08 21:53:37.050969 [Node 3] event=REQUEST_CS lamport=815
+2026/11/08 21:53:37.050969 [Node 3] event=SEND_REQUEST to=1 lamport=815
+2026/11/08 21:53:37.050969 [Node 3] event=SEND_REQUEST to=2 lamport=815
+2026/11/08 21:53:37.051566 [Node 3] event=RECEIVE_REPLY from=2 lamport=817 local=818 replies=1/2
+2026/11/08 21:53:37.051566 [Node 3] event=RECEIVE_REPLY from=1 lamport=818 local=819 replies=2/2
+2026/11/08 21:53:37.051566 [Node 3] event=ENTER_CS lamport=819
+2026/11/08 21:53:38.052183 [Node 3] event=EXIT_CS lamport=819 deferred=0
+2026/11/08 21:53:39.039847 [Node 3] event=RECEIVE_REQUEST from=2 lamport=818 local=820 state=RELEASED
+2026/11/08 21:53:39.039847 [Node 3] event=SEND_REPLY to=2 lamport=821
+2026/11/08 21:53:39.296639 [Node 3] event=RECEIVE_REQUEST from=1 lamport=821 local=822 state=RELEASED
+2026/11/08 21:53:39.296639 [Node 3] event=SEND_REPLY to=1 lamport=823
+2026/11/08 21:53:40.936457 [Node 3] event=REQUEST_CS lamport=824
+2026/11/08 21:53:40.936519 [Node 3] event=SEND_REQUEST to=1 lamport=824
+2026/11/08 21:53:40.936519 [Node 3] event=SEND_REQUEST to=2 lamport=824
+2026/11/08 21:53:40.937048 [Node 3] event=RECEIVE_REPLY from=2 lamport=827 local=828 replies=1/2
+2026/11/08 21:53:41.042232 [Node 3] event=RECEIVE_REPLY from=1 lamport=828 local=829 replies=2/2
+2026/11/08 21:53:41.042232 [Node 3] event=ENTER_CS lamport=829
+2026/11/08 21:53:42.043249 [Node 3] event=EXIT_CS lamport=829 deferred=0
+2026/11/08 21:53:42.693477 [Node 3] event=RECEIVE_REQUEST from=1 lamport=829 local=830 state=RELEASED
+2026/11/08 21:53:42.693500 [Node 3] event=SEND_REPLY to=1 lamport=831
+2026/11/08 21:53:43.366391 [Node 3] event=RECEIVE_REQUEST from=2 lamport=832 local=833 state=RELEASED
+2026/11/08 21:53:43.366391 [Node 3] event=SEND_REPLY to=2 lamport=834
+2026/11/08 21:53:43.532445 [Node 3] event=REQUEST_CS lamport=835
+2026/11/08 21:53:43.532502 [Node 3] event=SEND_REQUEST to=1 lamport=835
+2026/11/08 21:53:43.532502 [Node 3] event=SEND_REQUEST to=2 lamport=835
+2026/11/08 21:53:43.693733 [Node 3] event=RECEIVE_REPLY from=1 lamport=837 local=838 replies=1/2
+2026/11/08 21:53:44.694563 [Node 3] event=RECEIVE_REPLY from=2 lamport=840 local=841 replies=2/2
+2026/11/08 21:53:44.694563 [Node 3] event=ENTER_CS lamport=841
+2026/11/08 21:53:45.695544 [Node 3] event=EXIT_CS lamport=841 deferred=0
+2026/11/08 21:53:46.442171 [Node 3] event=RECEIVE_REQUEST from=2 lamport=841 local=842 state=RELEASED
+2026/11/08 21:53:46.442171 [Node 3] event=SEND_REPLY to=2 lamport=843
+2026/11/08 21:53:47.115312 [Node 3] event=RECEIVE_REQUEST from=1 lamport=844 local=845 state=RELEASED
+2026/11/08 21:53:47.115312 [Node 3] event=SEND_REPLY to=1 lamport=846
+2026/11/08 21:53:47.555583 [Node 3] event=REQUEST_CS lamport=847
+2026/11/08 21:53:47.555583 [Node 3] event=SEND_REQUEST to=1 lamport=847
+2026/11/08 21:53:47.555583 [Node 3] event=SEND_REQUEST to=2 lamport=847
+2026/11/08 21:53:47.556179 [Node 3] event=RECEIVE_REPLY from=2 lamport=849 local=850 replies=1/2
+2026/11/08 21:53:48.444398 [Node 3] event=RECEIVE_REPLY from=1 lamport=850 local=851 replies=2/2
+2026/11/08 21:53:48.444398 [Node 3] event=ENTER_CS lamport=851
+2026/11/08 21:53:48.917249 [Node 3] event=RECEIVE_REQUEST from=2 lamport=850 local=852 state=HELD
+2026/11/08 21:53:48.917804 [Node 3] event=DEFER_REPLY to=2
+2026/11/08 21:53:49.445554 [Node 3] event=EXIT_CS lamport=852 deferred=1
+2026/11/08 21:53:49.445605 [Node 3] event=SEND_REPLY to=2 lamport=853
+2026/11/08 21:53:51.800334 [Node 3] event=REQUEST_CS lamport=854
+2026/11/08 21:53:51.800334 [Node 3] event=SEND_REQUEST to=1 lamport=854
+2026/11/08 21:53:51.800334 [Node 3] event=SEND_REQUEST to=2 lamport=854
+2026/11/08 21:53:51.800334 [Node 3] event=RECEIVE_REPLY from=1 lamport=856 local=857 replies=1/2
+2026/11/08 21:53:51.800334 [Node 3] event=RECEIVE_REPLY from=2 lamport=856 local=858 replies=2/2
+2026/11/08 21:53:51.800334 [Node 3] event=ENTER_CS lamport=858
+2026/11/08 21:53:52.246978 [Node 3] event=RECEIVE_REQUEST from=1 lamport=857 local=859 state=HELD
+2026/11/08 21:53:52.246978 [Node 3] event=DEFER_REPLY to=1
+2026/11/08 21:53:52.801544 [Node 3] event=EXIT_CS lamport=859 deferred=1
+2026/11/08 21:53:52.801544 [Node 3] event=SEND_REPLY to=1 lamport=860
+2026/11/08 21:53:52.802711 [Node 3] event=RECEIVE_REQUEST from=2 lamport=860 local=861 state=RELEASED
+2026/11/08 21:53:52.802711 [Node 3] event=SEND_REPLY to=2 lamport=862
+2026/11/08 21:53:55.579388 [Node 3] event=REQUEST_CS lamport=863
+2026/11/08 21:53:55.579388 [Node 3] event=SEND_REQUEST to=2 lamport=863
+2026/11/08 21:53:55.579388 [Node 3] event=SEND_REQUEST to=1 lamport=863
+2026/11/08 21:53:55.580526 [Node 3] event=RECEIVE_REPLY from=1 lamport=865 local=866 replies=1/2
+2026/11/08 21:53:55.580526 [Node 3] event=RECEIVE_REPLY from=2 lamport=866 local=867 replies=2/2
+2026/11/08 21:53:55.580526 [Node 3] event=ENTER_CS lamport=867
+2026/11/08 21:53:55.904672 [Node 3] event=RECEIVE_REQUEST from=2 lamport=867 local=868 state=HELD
+2026/11/08 21:53:55.904672 [Node 3] event=DEFER_REPLY to=2

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "mutualexclusion/grpc;proto";
+
+service RicartAgrawala {
+  // Blocks until the receiver grants access; the response is the Ricart-Agrawala reply.
+  rpc Request(.Request) returns (Reply);
+}
+
+message Request {
+  int32 id = 1;
+  int64 lamport = 2;
+}
+
+message Reply {
+  int32 id = 1;
+  int64 lamport = 2;
+}
