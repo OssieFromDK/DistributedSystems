@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option go_package = "auctionsystem/grpc;proto";
+
+service Auction {
+  rpc Bid(BidRequest) returns (Ack);
+  rpc Result(Empty) returns (Outcome);
+  rpc Replicate(State) returns (Empty);
+}
+
+message BidRequest {
+  string bidder = 1;
+  int64 id = 2;
+  int64 amount = 3;
+}
+
+message Ack {
+  int64 id = 1;
+  string outcome = 2;
+}
+
+message Outcome {
+  bool over = 1;
+  string bidder = 2;
+  int64 amount = 3;
+}
+
+message State {
+  string bidder = 1;
+  int64 amount = 2;
+  int64 end = 3;
+  map<string, Ack> acks = 4;
+}
+
+message Empty {}

@@ -1,0 +1,7 @@
+2026/11/23 00:26:51.433530 [Client bob] event=BID node=1 id=1795390011425141300 amount=50 outcome=FAIL
+2026/11/23 00:26:52.435902 [Client bob] event=BID node=1 id=1795390012433488900 amount=100 outcome=FAIL
+2026/11/23 00:26:53.989911 [Client bob] event=BID node=1 id=1795390013987998500 amount=150 outcome=SUCCESS
+2026/11/23 00:27:16.815576 [Client bob] event=NODE_DOWN node=1 error="rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp [::1]:5001: connectex: No connection could be made because the target machine actively refused it.\""
+2026/11/23 00:27:16.828488 [Client bob] event=RESULT node=2 over=false bidder=alice amount=200
+2026/11/23 00:27:21.211092 [Client bob] event=BID node=2 id=1795390041209865800 amount=6767 outcome=SUCCESS
+2026/11/23 00:28:19.164153 [Client bob] event=RESULT node=2 over=true bidder=bob amount=6767

@@ -1,0 +1,11 @@
+2026/11/23 00:26:35.014793 [Node 1] event=STARTUP address=localhost:5001 end=00:28:15
+2026/11/23 00:26:47.506432 [Node 1] event=REGISTER bidder=alice
+2026/11/23 00:26:47.506432 [Node 1] event=BID bidder=alice id=1795390007487189700 amount=100 outcome=SUCCESS
+2026/11/23 00:26:47.511159 [Node 1] event=REPLICATED replies=2/2
+2026/11/23 00:26:51.431880 [Node 1] event=REGISTER bidder=bob
+2026/11/23 00:26:51.431880 [Node 1] event=BID bidder=bob id=1795390011425141300 amount=50 outcome=FAIL
+2026/11/23 00:26:51.432993 [Node 1] event=REPLICATED replies=2/2
+2026/11/23 00:26:52.434252 [Node 1] event=BID bidder=bob id=1795390012433488900 amount=100 outcome=FAIL
+2026/11/23 00:26:52.435378 [Node 1] event=REPLICATED replies=2/2
+2026/11/23 00:26:53.988278 [Node 1] event=BID bidder=bob id=1795390013987998500 amount=150 outcome=SUCCESS
+2026/11/23 00:26:53.989379 [Node 1] event=REPLICATED replies=2/2

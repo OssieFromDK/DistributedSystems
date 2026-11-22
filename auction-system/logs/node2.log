@@ -1,0 +1,32 @@
+2026/11/23 00:26:36.391592 [Node 2] event=STARTUP address=localhost:5002 end=00:28:16
+2026/11/23 00:26:47.509053 [Node 2] event=UPDATE bidder=alice amount=100 bidders=1
+2026/11/23 00:26:51.432414 [Node 2] event=UPDATE bidder=alice amount=100 bidders=2
+2026/11/23 00:26:52.434846 [Node 2] event=UPDATE bidder=alice amount=100 bidders=2
+2026/11/23 00:26:53.988855 [Node 2] event=UPDATE bidder=bob amount=150 bidders=2
+2026/11/23 00:27:02.902310 [Node 2] event=RESULT over=false bidder=bob amount=150
+2026/11/23 00:27:02.904395 [Node 2] event=REPLICA_DOWN node=1 error="rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp [::1]:5001: connectex: No connection could be made because the target machine actively refused it.\""
+2026/11/23 00:27:02.906017 [Node 2] event=REPLICATED replies=1/2
+2026/11/23 00:27:05.997873 [Node 2] event=BID bidder=alice id=1795390025996872800 amount=120 outcome=FAIL
+2026/11/23 00:27:05.997873 [Node 2] event=REPLICA_DOWN node=1 error="rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:5001: connectex: No connection could be made because the target machine actively refused it.\""
+2026/11/23 00:27:05.997873 [Node 2] event=REPLICATED replies=1/2
+2026/11/23 00:27:08.135637 [Node 2] event=BID bidder=alice id=1795390028135137400 amount=200 outcome=SUCCESS
+2026/11/23 00:27:08.135637 [Node 2] event=REPLICA_DOWN node=1 error="rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:5001: connectex: No connection could be made because the target machine actively refused it.\""
+2026/11/23 00:27:08.136283 [Node 2] event=REPLICATED replies=1/2
+2026/11/23 00:27:13.783732 [Node 2] event=RESULT over=false bidder=alice amount=200
+2026/11/23 00:27:13.783732 [Node 2] event=REPLICA_DOWN node=1 error="rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:5001: connectex: No connection could be made because the target machine actively refused it.\""
+2026/11/23 00:27:13.784257 [Node 2] event=REPLICATED replies=1/2
+2026/11/23 00:27:16.827280 [Node 2] event=RESULT over=false bidder=alice amount=200
+2026/11/23 00:27:16.827280 [Node 2] event=REPLICA_DOWN node=1 error="rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:5001: connectex: No connection could be made because the target machine actively refused it.\""
+2026/11/23 00:27:16.827800 [Node 2] event=REPLICATED replies=1/2
+2026/11/23 00:27:21.210025 [Node 2] event=BID bidder=bob id=1795390041209865800 amount=6767 outcome=SUCCESS
+2026/11/23 00:27:21.210025 [Node 2] event=REPLICA_DOWN node=1 error="rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp [::1]:5001: connectex: No connection could be made because the target machine actively refused it.\""
+2026/11/23 00:27:21.210546 [Node 2] event=REPLICATED replies=1/2
+2026/11/23 00:27:24.166547 [Node 2] event=RESULT over=false bidder=bob amount=6767
+2026/11/23 00:27:24.166547 [Node 2] event=REPLICA_DOWN node=1 error="rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp [::1]:5001: connectex: No connection could be made because the target machine actively refused it.\""
+2026/11/23 00:27:24.167728 [Node 2] event=REPLICATED replies=1/2
+2026/11/23 00:28:19.163060 [Node 2] event=RESULT over=true bidder=bob amount=6767
+2026/11/23 00:28:19.163591 [Node 2] event=REPLICA_DOWN node=1 error="rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp [::1]:5001: connectex: No connection could be made because the target machine actively refused it.\""
+2026/11/23 00:28:19.164153 [Node 2] event=REPLICATED replies=1/2
+2026/11/23 00:28:23.818720 [Node 2] event=RESULT over=true bidder=bob amount=6767
+2026/11/23 00:28:23.818720 [Node 2] event=REPLICA_DOWN node=1 error="rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp [::1]:5001: connectex: No connection could be made because the target machine actively refused it.\""
+2026/11/23 00:28:23.819257 [Node 2] event=REPLICATED replies=1/2
